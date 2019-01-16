@@ -102,7 +102,7 @@
 </template>
 
 <script>
-import carousel from './carousel'
+import carousel from './pageComp/carousel'
 export default {
   name: 'Home',
   data () {

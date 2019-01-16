@@ -4,29 +4,39 @@ import Home from '@/components/home'
 import News from '@/components/News'
 import AboutMe from '@/components/AboutMe'
 import Resolve from '@/components/resolve'
+import Contact from '@/components/contact'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
+      redirect: '/home'
+    },
+    {
+      path: '/home',
       name: 'Home',
       component: Home
     },
     {
-      path:'/News',
+      path:'/news',
       name:'News',
-      component:News
+      component: News
     },
     {
-      path:'/AboutMe',
+      path:'/aboutme',
       name:'AboutMe',
-      component:AboutMe
+      component: AboutMe
     },
     {
-      path:'/Resolve',
+      path:'/resolve',
       name:'Resolve',
-      component:Resolve
-    }
+      component: Resolve
+    },
+    {
+      path:'/contact',
+      name:'Contact',
+      component: Contact
+    },
   ]
 })

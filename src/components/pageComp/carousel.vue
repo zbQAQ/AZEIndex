@@ -11,15 +11,15 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner myInner" role="listbox">
         <div class="item active" style="background: rgb(14, 14, 42);">
-          <img src="../assets/image/carousel1.jpg" alt="carousel">
+          <img src="../../assets/image/carousel1.jpg" alt="carousel">
           <div class="carousel-caption"></div>
         </div>
         <div class="item">
-          <img src="../assets/image/carousel2.jpg" alt="carousel">
+          <img src="../../assets/image/carousel2.jpg" alt="carousel">
           <div class="carousel-caption"></div>
         </div>
         <div class="item">
-          <img src="../assets/image/carousel3.jpg" alt="carousel">
+          <img src="../../assets/image/carousel3.jpg" alt="carousel">
           <div class="carousel-caption"></div>
         </div>
       </div>
