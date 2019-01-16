@@ -22,6 +22,7 @@
             <li><a href="#/AboutMe">关于我们</a></li>
             <li><a href="#/News">新闻中心</a></li>
             <li><a href="#/Resolve">解决方案</a></li>
+            <li><a href="#/Resolve">客户案例</a></li>
             <li><a href="#">联系我们</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
