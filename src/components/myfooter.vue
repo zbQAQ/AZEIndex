@@ -32,7 +32,10 @@ export default {
 	height: 50px;
 	line-height: 50px;
 	text-align: center;
-	background: #f5f5f5;
+	color: white;
+	/* background: #f5f5f5; */
+	background-color: #3a3a3a;
+	/*yinjianquan更改了footer样式*/
 }
 .footerTxt {
 	display: inline-block;

@@ -18,10 +18,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right myNavCollapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav myNav">
-            <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="#/">首页 <span class="sr-only">(current)</span></a></li>
             <li><a href="#/AboutMe">关于我们</a></li>
             <li><a href="#/News">新闻中心</a></li>
-            <li><a href="#/Resolve">解决方案</a></li>
+            <li><a href="#/Resolve" class="resolve">
+             解决方案
+            </a></li>
             <li><a href="#/Resolve">客户案例</a></li>
             <li><a href="#">联系我们</a></li>
           </ul>
@@ -108,6 +110,8 @@ export default {
     border-left: 0;
     border-top: 5px solid #C5C5C5;
   }
-  
+  .resolve{
+    transform: translateY(0)
+  }
 }
 </style>

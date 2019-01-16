@@ -1,26 +1,31 @@
 <template>
    <div>
     <div class="container">
-        <div class="row">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#">公众</a></li>
+            <li role="presentation"><a href="#">企业</a></li>
+            <li role="presentation"><a href="#">政府</a></li>
+        </ul>
+        <!-- <div class="row">
            <div class="col-md-4">
                <div>
-                   <button v-if="show" type="button" class="btn btn-default" data-toggle="tooltip" data-pl                    acement="left" title="深圳市人民政府" @click="show()">政府</button>
-                   <!-- <span v-else class="btn btn-default zhengfu">政府</span> -->
+                   <button v-if="show" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="深圳市人民政府" @click="show()">政府</button>
+                   
                </div>
                
            </div>
         
             <div class="col-md-4">
                 <div>
-                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="le                    ft" title="某某企业" @click="hide()">企业</button>
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="某某企业" @click="hide()">企业</button>
                 </div>
             </div>
             <div class="col-md-4">
                 <div >
-                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="le                    ft" title="">公众</button>
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="">公众</button>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="row app">
           <div class="col-md-4">
             <div class="img">
@@ -46,15 +51,56 @@
     </div>
 	<div class="container2">
 		<div class="row">
-			<div class="col-md-4" id="news">
+			<div class="col-md-5 col-xs-12 column" id="news">
 				<div class="title">新闻</div>
 				
-			</div>
-			<div class="col-md-4">
+				<div class="news">
+                    <ul>
+                        <li>
+                            <a href="#">广饶县开展网格化环境监管平台上线培训</a>
+                            <p>2019年12月23</p>
+                        </li>
+                        <li>
+                            <a href="#">广饶县开展网格化环境监管平台上线培训</a>
+                            <p>2019年12月23</p>
+                        </li>
+                        <li>
+                            <a href="#">广饶县开展网格化环境监管平台上线培训</a>
+                            <p>2019年12月23</p>
+                        </li>
+                        <li>
+                            <a href="#">广饶县开展网格化环境监管平台上线培训</a>
+                            <p>2019年12月23</p>
+                        </li>
+                    </ul>
+                </div>
 				
 			</div>
-			<div class="col-md-4">
-				
+			<div class="col-md-4 col-xs-12">
+				<div class="contact">联系我们</div>
+                  <div class="contact-information">
+                    <p>总部地址: <span>深圳市南山区高新区科研路9号比克科技大厦14楼</span></p>
+                    <ul>
+                        <li>
+                            联系电话: <span>0755-26734049</span>
+                        </li>
+                        <li>
+                            座机号码: <span>26734049-8002</span>
+                        </li>
+                        <li>
+                            全国客服热线: <span>400-800-2673</span>
+                        </li>
+                        <li>
+                            联系QQ: <span>674418063，2725424670</span>
+                        </li>        
+                    </ul>
+
+                  </div>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<div class="img">
+                    <img src=".././assets/image/qrcodeimg.png" alt="">
+                </div>
 			</div>
 		</div>
 	</div>
@@ -87,7 +133,17 @@ export default {
        margin-top: 16px;
 	   border: 1px #ccc solid;
 	   padding-bottom: 20px;
+       margin-bottom: 20px;
    }
+   .container .nav li{
+       width: 370px;
+       height: 50px;
+       line-height: 50px;
+       
+   }
+    .container  .nav{
+       height: 40px;
+    }
    .container .row button{
        width: 390px;
        height: 60px;
@@ -104,8 +160,15 @@ export default {
    .zhengfu{
        
    }
-   .col-md-3{
-       margin: 10px;
+   .col-md-3 .img{
+       /* margin: 10px; */
+       position: relative;
+       top: 80px;
+       right: -76px;
+   }
+   .col-md-3 .img img{
+       width: 200px;
+       height: auto;
    }
    .col-md-4 .img:hover{
 	   text-decoration-line: none;
@@ -128,24 +191,63 @@ export default {
    .container2{
 	   background-color: #f1f1f1;
 	   width: 100%;
-	   height: 600px;
+	   height: 520px;
 	   display: inline-block;
-	   padding: 0 400px;;
+	   padding: 0 324px;;
    }
-   .row{
+   /* .row{
 	   text-align:center;
 	   
-   }
+   } */
    .container2 .row .col-md-4{
 	   padding: 20px;
    }
    .title{
-	   font-size: 18px;
+	   font-size: 24px;
     color: #333;
-    float: left;
+    /* float: left; */
     position: relative;
-    padding-left: 11px;
+    /* padding-left: 11px; */
 	border-left: #20ACE6 solid 4px;
 	font-weight: bold;
+    margin: 30px 0;
+    
+   }
+   .news a{
+      padding: 20px 0;
+      line-height: 40px;
+      text-decoration-line: none;
+      font-size: 16px;
+      font-weight: 700;
+      color: black;
+   }
+   .news a:hover{
+       color: #20ACE6;
+   }
+   .news ul{
+       width: 100%;
+       list-style-type: none; 
+   }
+   .news ul p{
+       color: #ccc;  
+   }
+   .contact{
+        font-size: 24px;
+        color: #333;
+        /* float: left; */
+        position: relative;
+        /* padding-left: 11px; */
+        border-left: #20ACE6 solid 4px;
+        font-weight: bold;
+        margin: 16px 0;
+        
+   }
+   .contact-information ul li{
+       width: 100%;
+       list-style-type: none;
+       line-height: 44px; 
+   }
+   .contact-information p{
+       font-weight: 700;
    }
 </style>
