@@ -11,19 +11,24 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand myNavbrand" href="#">
-            <img src="../assets/logo.png" class="logo" alt="安志生态">
+            <img src="../../assets/logo.png" class="logo" alt="安志生态">
           </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right myNavCollapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav myNav">
-            <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
-            <li><a href="#/AboutMe">关于我们</a></li>
-            <li><a href="#/News">新闻中心</a></li>
-            <li><a href="#/Resolve">解决方案</a></li>
-            <li><a href="#/Resolve">客户案例</a></li>
-            <li><a href="#">联系我们</a></li>
+            <!-- <li class="active"><a href="#/home">首页</a></li>
+            <li class=""><a href="#/aboutme">关于我们</a></li>
+            <li class=""><a href="#/news">新闻中心</a></li>
+            <li class=""><a href="#/resolve">解决方案</a></li>
+            <li class=""><a href="#/cuscase">客户案例</a></li>
+            <li class=""><a href="#/cantact">联系我们</a></li> -->
+
+            <li v-for="(item, index) in navlist" :key="index" v-bind:class="{'active':curPage === item.path}">
+              <a :href="'#/' + item.path" @click="changePath(item.path)">{{item.name}}</a>
+            </li>
+
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -35,7 +40,22 @@
 export default {
   name: 'myheader',
   data () {
-    return {}
+    return {
+      navlist: [
+        {path: 'home', name: '首页'},
+        {path: 'aboutme', name: '关于我们'},
+        {path: 'news', name: '新闻中心'},
+        {path: 'resolve', name: '解决方案'},
+        {path: 'cuscase', name: '客户案例'},
+        {path: 'contact', name: '联系我们'},
+      ],
+      curPage: 'home'
+    }
+  },
+  methods: {
+    changePath(name) {
+      this.curPage = name
+    }
   }
 }
 </script>
