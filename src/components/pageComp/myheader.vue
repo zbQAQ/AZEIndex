@@ -18,16 +18,6 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right myNavCollapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav myNav">
-<<<<<<< HEAD:src/components/myheader.vue
-            <li class="active"><a href="#/">首页 <span class="sr-only">(current)</span></a></li>
-            <li><a href="#/AboutMe">关于我们</a></li>
-            <li><a href="#/News">新闻中心</a></li>
-            <li><a href="#/Resolve" class="resolve">
-             解决方案
-            </a></li>
-            <li><a href="#/Resolve">客户案例</a></li>
-            <li><a href="#">联系我们</a></li>
-=======
             <!-- <li class="active"><a href="#/home">首页</a></li>
             <li class=""><a href="#/aboutme">关于我们</a></li>
             <li class=""><a href="#/news">新闻中心</a></li>
@@ -39,7 +29,6 @@
               <a :href="'#/' + item.path" @click="changePath(item.path)">{{item.name}}</a>
             </li>
 
->>>>>>> bc755bd1d1547061b8f6f023da1cb02449c429f8:src/components/pageComp/myheader.vue
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
