@@ -1,0 +1,50 @@
+
+/**  vue Gen  **/
+
+<template>
+	<div class="temp">
+		{{msg}}
+	</div>
+</template>
+<script>
+export default {
+  name: 'myTemplate',
+  data () {
+    return {
+			msg: 'hello myTemplate!'
+		}
+  },
+	methods: {}
+}
+</script>
+<style scoped>
+
+</style>
+
+
+/***************************/
+
+
+/**  components  **/
+
+<template>
+	<div class="temp">
+		{{msg}}
+	</div>
+</template>
+
+<script>
+export default {
+  name: 'myComponents',
+	props: [],
+  data () {
+    return {
+			msg: 'hello myComponents!'
+		}
+  },
+	methods: {}
+}
+</script>
+<style scoped>
+
+</style>
