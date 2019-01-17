@@ -24,7 +24,7 @@
           <div class="title">联系我们</div>
 
           <p class="address">
-            总部地址: <span>深圳市南山区高新区科研路9号比克科技大厦14楼</span>
+            总部地址: <span>深圳市南山区粤兴四道与高新南交汇处北航大厦8楼8006</span>
           </p>
           <p class="phone">
             联系电话: <span>0755-26734049</span>
