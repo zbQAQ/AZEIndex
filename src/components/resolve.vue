@@ -1,5 +1,5 @@
 <template>
-   <div>
+   <div class="resolve">
     <div class="container">
         <ul class="nav nav-tabs">
             <li role="presentation" class="active"><a href="#">公众</a></li>
@@ -49,64 +49,13 @@
          </div>
        </div>
     </div>
-	<div class="container2">
-		<div class="row">
-			<div class="col-md-5 col-xs-12 column" id="news">
-				<div class="title">新闻</div>
-				
-				<div class="news">
-                    <ul>
-                        <li>
-                            <a href="#">广饶县开展网格化环境监管平台上线培训</a>
-                            <p>2019年12月23</p>
-                        </li>
-                        <li>
-                            <a href="#">广饶县开展网格化环境监管平台上线培训</a>
-                            <p>2019年12月23</p>
-                        </li>
-                        <li>
-                            <a href="#">广饶县开展网格化环境监管平台上线培训</a>
-                            <p>2019年12月23</p>
-                        </li>
-                        <li>
-                            <a href="#">广饶县开展网格化环境监管平台上线培训</a>
-                            <p>2019年12月23</p>
-                        </li>
-                    </ul>
-                </div>
-				
-			</div>
-			<div class="col-md-4 col-xs-12">
-				<div class="contact">联系我们</div>
-                  <div class="contact-information">
-                    <p>总部地址: <span>深圳市南山区高新区科研路9号比克科技大厦14楼</span></p>
-                    <ul>
-                        <li>
-                            联系电话: <span>0755-26734049</span>
-                        </li>
-                        <li>
-                            座机号码: <span>26734049-8002</span>
-                        </li>
-                        <li>
-                            全国客服热线: <span>400-800-2673</span>
-                        </li>
-                        <li>
-                            联系QQ: <span>674418063，2725424670</span>
-                        </li>        
-                    </ul>
+	
+    <actBox />
 
-                  </div>
-			</div>
-			<div class="col-md-3 col-xs-12">
-				<div class="img">
-                    <img src=".././assets/image/qrcodeimg.png" alt="">
-                </div>
-			</div>
-		</div>
-	</div>
   </div>		
 </template>
 <script>
+import actBox from './pageComp/actbox'
 export default {
     name:'resolve',
     data(){
@@ -122,13 +71,18 @@ export default {
          hide(){
 
          }
+    },
+    components: {
+        actBox
     }
 }
 </script>
 <style scoped>
-	/* *{
-		text-decoration: none;
-	} */
+
+    .resolve {
+        margin-bottom: 50px;
+    }
+
    .container{
        margin-top: 16px;
 	   border: 1px #ccc solid;
@@ -232,13 +186,13 @@ export default {
        color: #ccc;  
    }
    .contact{
-        font-size: 24px;
+        /* font-size: 24px; */
         color: #333;
         /* float: left; */
         position: relative;
         /* padding-left: 11px; */
         border-left: #20ACE6 solid 4px;
-        font-weight: bold;
+        /* font-weight: bold; */
         margin: 16px 0;
         
    }
