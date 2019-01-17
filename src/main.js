@@ -5,8 +5,11 @@ import VueAMap from 'vue-amap';
 import App from './App'
 import router from './router'
 
+/*** 引入bootstrap */
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
+/*** 引入font-awesome */
+import 'font-awesome/css/font-awesome.min.css'
 
 Vue.config.productionTip = false
 
