@@ -112,7 +112,7 @@ export default {
 	},
 	/*添加了一个钩子函数*/ 
 	mounted:function(){
-			alert("欢迎来到安志生态环境有限公司");
+			// alert("欢迎来到安志生态环境有限公司");
 	},
 	components: {
 		carousel
