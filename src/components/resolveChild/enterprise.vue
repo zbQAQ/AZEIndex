@@ -3,7 +3,7 @@
        <div class="container">
            <div class="row">
               <div class="col-md-4 left">
-                <a href="#/page1" id="text">
+                <a href="#/resoDetail" id="text">
                      <div class="img">
                         <img src="../../assets/image/enterprise1.jpg" alt="">
                      </div>
@@ -11,7 +11,7 @@
                           智慧工业园区
                      </span>
                 </a>
-                 <a href="#/page2" id="text">
+                 <a href="#/resoDetail" id="text">
                      <div class="img">
                         <img src="../../assets/image/enterprise2.jpg" alt="">
                      </div>
@@ -19,7 +19,7 @@
                           污染源在线监控系统
                      </span>
                  </a>
-                 <a href="#page3" id="text">
+                 <a href="#/resoDetail" id="text">
                      <div class="img">
                         <img src="../../assets/image/enterprise3.jpg" alt="">
                      </div>
@@ -29,7 +29,7 @@
                  </a>
               </div>
               <div class="col-md-4 " id="zx">
-                <a href="#/page4" id="text">  
+                <a href="#/resoDetail" id="text">
                   <div class="img">
                       <img src="../../assets/image/enterprise4.jpg" alt="">
                   </div>
@@ -37,7 +37,7 @@
                           VOCs在线监控系统
                      </span>
                 </a>
-                <a href="#/page5" id="text">  
+                <a href="#/resoDetail" id="text">
                   <div class="img">
                       <img src="../../assets/image/enterprise5.jpg" alt="">
                   </div>
@@ -45,7 +45,7 @@
                           高空瞭望环境监控系统
                      </span>
                 </a>
-                <a href="#/page6" id="text">  
+                <a href="#/resoDetail" id="text">
                   <div class="img">
                       <img src="../../assets/image/enterprise6.jpg" alt="">
                   </div>
@@ -55,7 +55,7 @@
                 </a>
               </div>
               <div class="col-md-4 " id="right">
-                 <a href="#/page7" id="text">  
+                 <a href="#/resoDetail" id="text">
                     <div class="img">
                         <img src="../../assets/image/enterprise7.jpg" alt="">
                     </div>
@@ -63,7 +63,7 @@
                           扬尘噪声在线监测系统
                      </span>
                  </a>
-                <a href="#/page8" id="text">   
+                <a href="#/resoDetail" id="text">
                 <div class="img">
                     <img src="../../assets/image/enterprise8.jpg" alt="">
                 </div>

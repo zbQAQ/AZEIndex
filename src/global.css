@@ -2,7 +2,7 @@ body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,s
 body{font:14px"微软雅黑";background:#fff;-webkit-text-size-adjust:100%;} 
 html,body{height:100%;} 
 a{text-decoration:none} 
-a:hover{text-decoration:none} 
+a:focus, a:hover{text-decoration:none} 
 em{font-style:normal} 
 li{list-style:none} 
 img{border:0;vertical-align:middle;height: 100%;width: 100%;} 

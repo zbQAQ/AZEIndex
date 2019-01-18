@@ -7,8 +7,8 @@
             <li role="presentation"><a href="#">政府</a></li>
         </ul> -->
         <div class="row">
-           <div class="col-md-4">
-               <div class="router">
+           <div class="col-md-4 topNav">
+               <div class="router" v-bind:class="{'pageActive':page === 'goverment'}" @click="changePage('goverment')">
                    <router-link to="goverment">
                        <div>
                          公众   
@@ -20,8 +20,8 @@
                
            </div>
         
-            <div class="col-md-4">
-                <div class="router">
+            <div class="col-md-4 topNav">
+                <div class="router" v-bind:class="{'pageActive':page === 'enterprise'}" @click="changePage('enterprise')">
                    <router-link to="enterprise"  data-toggle="tooltip" data-placement="left" title="某某企业" @click="hide()">
                        <div>
                            企业
@@ -29,15 +29,15 @@
                    </router-link>
                 </div>
             </div>
-            <div class="col-md-4 goverment">
-                <div class="router">
+            <div class="col-md-4 topNav goverment">
+                <div class="router" v-bind:class="{'pageActive':page === 'public'}" @click="changePage('public')">
                     <router-link to="public">
                         <div>政府</div>
                     </router-link>
                     <!-- <router-link to="public" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="">公众</router-link> -->
                 </div>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-12 resView">
                 <router-view></router-view>
             </div>
         </div>
@@ -53,7 +53,8 @@ export default {
     name:'resolve',
     data(){
         return{
-            msg:'hello resolve'
+            msg:'hello resolve',
+            page: 'goverment'
         }
     },
     methods:{
@@ -63,6 +64,9 @@ export default {
          },
          hide(){
 
+         },
+         changePage(page) {
+            this.page = page
          }
     },
     components: {
@@ -92,7 +96,7 @@ export default {
     .container  .nav{
        height: 40px;
     }
-   .container .row .router{
+    .row .router{
        width: 390px;
        height: 60px;
        color: #787878;
@@ -101,12 +105,18 @@ export default {
 	   position: relative;
 	   top:0;
 	   left: -15px;
-       border: 1px solid #ccc;
-       
+       border: 1px solid #f8f8f8;
+       border-bottom-color: #eee;
        text-align: center;
        line-height: 60px;
-       
    }
+    .container .row .router.pageActive {
+        background: #fff;
+        border-bottom: none;
+    }
+    .container .row .router.pageActive a {
+        color: #666;
+    }
    /* 没有效果 */
    .row .router:horizontal{
        text-decoration: none;
@@ -193,17 +203,7 @@ export default {
    .news ul p{
        color: #ccc;  
    }
-   .contact{
-        /* font-size: 24px; */
-        color: #333;
-        /* float: left; */
-        position: relative;
-        /* padding-left: 11px; */
-        border-left: #20ACE6 solid 4px;
-        /* font-weight: bold; */
-        margin: 16px 0;
-        
-   }
+
    .contact-information ul li{
        width: 100%;
        list-style-type: none;
@@ -213,6 +213,21 @@ export default {
        font-weight: 700;
    }
    .resolve{
-       margin: 20px;
+       /* margin: 20px; */
    }
+   .resView{
+       padding-top: 15px;
+   }
+
+    @media (max-width: 992px) {
+        .topNav {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .topNav .router{
+            width: 100%;
+            left: 0;
+        }
+    }
+
 </style>

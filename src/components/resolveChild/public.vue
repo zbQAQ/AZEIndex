@@ -4,7 +4,7 @@
           <div class="col-md-4">
             <div class="img">
                 <div class="hover">
-                     <a href="#">
+                     <a href="#/resoDetail">
                          <div class="img-box">
                             <img src="../../assets/image/goverment1.jpg" alt="app">
                         </div>
@@ -16,7 +16,7 @@
          <div class="col-md-4">
             <div class="img">
                 <div class="hover">
-                     <a href="#">
+                     <a href="#/resoDetail">
                          <div class="img-box">
                             <img src="../../assets/image/government2.jpg" alt="app">
                         </div>
@@ -28,7 +28,7 @@
          <div class="col-md-4">
             <div class="img">
                 <div class="hover">
-                     <a href="#">
+                     <a href="#/resoDetail">
                          <div class="img-box">
                             <img src="../../assets/image/government3.jpg" alt="app">
                         </div>
@@ -42,7 +42,7 @@
           <div class="col-md-4">
             <div class="img">
                 <div class="hover">
-                     <a href="#">
+                     <a href="#/resoDetail">
                          <div class="img-box">
                             <img src="../../assets/image/government4.jpg" alt="app">
                         </div>
@@ -54,7 +54,7 @@
          <div class="col-md-4">
             <div class="img">
                 <div class="hover">
-                     <a href="#">
+                     <a href="#/resoDetail">
                          <div class="img-box">
                             <img src="../../assets/image/government5.jpg" alt="app">
                         </div>
@@ -66,7 +66,7 @@
          <div class="col-md-4">
             <div class="img">
                 <div class="hover">
-                     <a href="#">
+                     <a href="#/resoDetail">
                          <div class="img-box">
                             <img src="../../assets/image/government6.jpg" alt="app">
                         </div>
@@ -80,7 +80,7 @@
           <div class="col-md-4">
             <div class="img">
                 <div class="hover">
-                     <a href="#">
+                     <a href="#/resoDetail">
                          <div class="img-box">
                             <img src="../../assets/image/government7.jpg" alt="app">
                         </div>
@@ -92,7 +92,7 @@
          <div class="col-md-4">
             <div class="img">
                 <div class="hover">
-                     <a href="#">
+                     <a href="#/resoDetail">
                          <div class="img-box">
                             <img src="../../assets/image/government8.jpg" alt="app">
                         </div>
@@ -104,7 +104,7 @@
          <div class="col-md-4">
             <div class="img">
                 <div class="hover">
-                     <a href="#">
+                     <a href="#/resoDetail">
                          <div class="img-box">
                             <img src="../../assets/image/government9.jpg" alt="app">
                         </div>

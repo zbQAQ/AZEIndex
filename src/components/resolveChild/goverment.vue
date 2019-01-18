@@ -4,7 +4,7 @@
           <div class="col-md-4">
             <div class="img">
                 <div class="hover">
-                     <a href="#">
+                     <a href="#/resoDetail">
                          <div class="img-box">
                             <img src="../../assets/image/resolve-app.jpg" alt="app">
                         </div>
@@ -16,7 +16,7 @@
          <div class="col-md-4">
             <div class="img">
                 <div class="hover">
-                     <a href="#">
+                     <a href="#/resoDetail">
                          <div class="img-box">
                             <img src="../../assets/image/resolve-wx.jpg" alt="app">
                         </div>

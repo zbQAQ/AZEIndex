@@ -5,7 +5,7 @@
                <div class="col-md-2">
                    <img src=".././assets/image/news1.jpg" alt="我的图片" class="news1">
                </div>
-               <div class="col-md-10">
+               <div class="col-md-10 cont">
                    <span><h3>12月19日，广饶县网格化环境监管平台上线培训会议召开。</h3></span>
                <span class="news">
                    
@@ -22,7 +22,7 @@
                <div class="col-md-2">
                    <img src=".././assets/image/news1.jpg" alt="我的图片" class="news1">
                </div>
-               <div class="col-md-10">
+               <div class="col-md-10 cont">
                    <span><h3>12月20日，广饶县网格化环境监管平台上线培训会议召开。</h3></span>
                <span class="news">
                    
@@ -39,7 +39,7 @@
                <div class="col-md-2">
                    <img src=".././assets/image/news1.jpg" alt="我的图片" class="news1">
                </div>
-               <div class="col-md-10">
+               <div class="col-md-10 cont">
                    <span><h3>12月21日，广饶县网格化环境监管平台上线培训会议召开。</h3></span>
                <span class="news">
                    
@@ -56,7 +56,7 @@
                <div class="col-md-2">
                    <img src=".././assets/image/news1.jpg" alt="我的图片" class="news1">
                </div>
-               <div class="col-md-10">
+               <div class="col-md-10 cont">
                    <span><h3>12月22日，广饶县网格化环境监管平台上线培训会议召开。</h3></span>
                <span class="news">
                    
@@ -73,7 +73,7 @@
                <div class="col-md-2">
                    <img src=".././assets/image/news1.jpg" alt="我的图片" class="news1">
                </div>
-               <div class="col-md-10">
+               <div class="col-md-10 cont">
                    <span><h3>12月23日，广饶县网格化环境监管平台上线培训会议召开。</h3></span>
                <span class="news">
                    
@@ -93,7 +93,7 @@
                <div class="col-md-10">
                   <div class="news11">
                        <span><h3>12月24日，广饶县网格化环境监管平台上线培训会议召开。</h3></span>
-               <span class="news">
+               <span class="news cont">
                    
                    为进一步加强生态文明建设，创造良好的人居环境，广饶县积极推进以环境监管执法为抓手，
                    坚持环保执法和刑事司法工作联动，进一步加大刑责治污力度，严厉打击偷排偷放等环境违法犯罪行为。
@@ -138,16 +138,15 @@ export default {
     } */
     .news{
         font-size: 15px;
-        color: black;
+        color: #666;
         font-family: "微软雅黑";
-        position: relative;
-        top:0;
-        left:0;
+        margin-top: 10px;
+        display: block;
     }
     .col-md-10 h3{
         font-size: 20px;
         font-weight: 700;
-        color: black;
+        color: #2d2d2d;
         font-family: "微软雅黑";
     }
     .col-md-10  h3:hover{
@@ -162,10 +161,16 @@ export default {
         
     }
     .col-md-10{
-        padding: 20px;
+        padding: 20px 20px 0;
         position: relative;
-        top: -40px;
+        top: -20px;
         right: -40px;
+    }
+    @media (max-width: 992px) {
+        .col-md-10{
+            top: 0;
+            right: 0;
+        }
     }
     @media screen and (max-width: 768px){
         .col-md-2 img{

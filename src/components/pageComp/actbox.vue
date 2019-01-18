@@ -89,7 +89,7 @@ export default {
 	text-align: center;
 }
 .actItem .newsItem {
-	padding-left: 10px;
+  padding-left: 1.2rem;
 	margin-bottom: 20px;
 }
 .actItem .newsItem .nTime {
