@@ -56,7 +56,7 @@
 		</div>
 
 		<actBox />
-
+			
 	</div>
 </template>
 

@@ -6,13 +6,14 @@
       <router-view/>
 
     <myFooter />
-
+ 
   </div>
 </template>
 
 <script>
 import myHeader from './components/pageComp/myheader'
 import myFooter from './components/pageComp/myfooter'
+
 export default {
   name: 'App',
   components: {

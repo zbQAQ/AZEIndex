@@ -1,7 +1,7 @@
 <template>
     <div class="container">
        <div class="row">
-           <a href="#" class="box">
+           <a href="#/NewsChild" class="box">
                <div class="col-md-2">
                    <img src=".././assets/image/news1.jpg" alt="我的图片" class="news1">
                </div>
@@ -18,7 +18,7 @@
            </a>
        </div>
        <div class="row">
-           <a href="#" class="box">
+           <a href="#/NewsChild" class="box">
                <div class="col-md-2">
                    <img src=".././assets/image/news1.jpg" alt="我的图片" class="news1">
                </div>
@@ -35,7 +35,7 @@
            </a>
        </div>
        <div class="row">
-           <a href="#" class="box">
+           <a href="#/NewsChild" class="box">
                <div class="col-md-2">
                    <img src=".././assets/image/news1.jpg" alt="我的图片" class="news1">
                </div>
@@ -52,7 +52,7 @@
            </a>
        </div>
        <div class="row">
-           <a href="#" class="box">
+           <a href="#/NewsChild" class="box">
                <div class="col-md-2">
                    <img src=".././assets/image/news1.jpg" alt="我的图片" class="news1">
                </div>
@@ -69,7 +69,7 @@
            </a>
        </div>
        <div class="row">
-           <a href="#" class="box">
+           <a href="#/NewsChild" class="box">
                <div class="col-md-2">
                    <img src=".././assets/image/news1.jpg" alt="我的图片" class="news1">
                </div>
@@ -86,7 +86,7 @@
            </a>
        </div>
        <div class="row">
-           <a href="#" class="box">
+           <a href="#/NewsChild" class="box">
                <div class="col-md-2">
                    <img src=".././assets/image/news1.jpg" alt="我的图片" class="news1">
                </div>
@@ -111,7 +111,9 @@ export default {
     name: 'news',
   data () {
     return {
-			msg: 'hello news'
+            msg: 'hello news',
+            active:false,
+            
 		}
   }
 }
