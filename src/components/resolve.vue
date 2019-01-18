@@ -1,57 +1,50 @@
 <template>
    <div class="resolve">
     <div class="container">
-        <ul class="nav nav-tabs">
+        <!-- <ul class="nav nav-tabs">
             <li role="presentation" class="active"><a href="#">公众</a></li>
             <li role="presentation"><a href="#">企业</a></li>
             <li role="presentation"><a href="#">政府</a></li>
-        </ul>
-        <!-- <div class="row">
+        </ul> -->
+        <div class="row">
            <div class="col-md-4">
-               <div>
-                   <button v-if="show" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="深圳市人民政府" @click="show()">政府</button>
-                   
+               <div class="router">
+                   <router-link to="goverment">
+                       <div>
+                         公众   
+                       </div>
+                   </router-link>
+                   <!-- <router-link to="Goverment" v-if="show"  class="btn btn-default" data-toggle="tooltip" 
+                   data-placement="left" title="深圳市人民政府" @click="show()">政府</router-link> -->
                </div>
                
            </div>
         
             <div class="col-md-4">
-                <div>
-                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="某某企业" @click="hide()">企业</button>
+                <div class="router">
+                   <router-link to="enterprise"  data-toggle="tooltip" data-placement="left" title="某某企业" @click="hide()">
+                       <div>
+                           企业
+                       </div>
+                   </router-link>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div >
-                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="">公众</button>
+            <div class="col-md-4 goverment">
+                <div class="router">
+                    <router-link to="public">
+                        <div>政府</div>
+                    </router-link>
+                    <!-- <router-link to="public" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="">公众</router-link> -->
                 </div>
             </div>
-        </div> -->
-        <div class="row app">
-          <div class="col-md-4">
-            <div class="img">
-                <div class="hover">
-                     <div class="img-box">
-					    <img src=".././assets/image/resolve-app.jpg" alt="app">
-					 </div>
-					<span data-toggle="tooltip" data-placement="left" title="公众服务">公众服务APP</span>
-                </div>
+            <div class="col-md-12">
+                <router-view></router-view>
             </div>
-         </div>
-         <div class="col-md-4">
-            <div class="img">
-                <div class="hover">
-                     <div class="img-box">
-						 <img src=".././assets/image/resolve-wx.jpg" alt="app">
-					 </div>
-					<span data-toggle="tooltip" data-placement="left" title="申请投诉">申请投诉</span>
-                </div>
-            </div>
-         </div>
-       </div>
+        </div>
     </div>
 	
     <actBox />
-
+    
   </div>		
 </template>
 <script>
@@ -76,6 +69,7 @@ export default {
         actBox
     }
 }
+
 </script>
 <style scoped>
 
@@ -98,7 +92,7 @@ export default {
     .container  .nav{
        height: 40px;
     }
-   .container .row button{
+   .container .row .router{
        width: 390px;
        height: 60px;
        color: #787878;
@@ -107,6 +101,20 @@ export default {
 	   position: relative;
 	   top:0;
 	   left: -15px;
+       border: 1px solid #ccc;
+       
+       text-align: center;
+       line-height: 60px;
+       
+   }
+   /* 没有效果 */
+   .row .router:horizontal{
+       text-decoration: none;
+       background-color: white;
+       color: #20ACE6;
+       border-top:blue 4px solid;
+       border-bottom: none;
+       border-left:none;
    }
    .app{
        margin-top:16px;
@@ -203,5 +211,8 @@ export default {
    }
    .contact-information p{
        font-weight: 700;
+   }
+   .resolve{
+       margin: 20px;
    }
 </style>
