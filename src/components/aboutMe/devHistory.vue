@@ -8,34 +8,19 @@
 		<div class="hisMain">
 
 			<ul class="course">
-				<li>
 
+				<li v-for="(item, index) in hisList" :key="index">
 					<div class="cbot"><span class="fa fa-angle-double-down icon"></span></div>
 					<div class="contxt">
 						<div class="time">
-							<span>2000</span>年 ---
+							<span class="timer">{{item.time}}</span>年 <span class="hidden-xs">---</span>
 						</div>
 						<div class="desc">
-							公司成立于深圳, 并成功推出首款产品"博安达数字环境信息网络系统", 提出了污染源全生命周期管理的理念, 并成功实施.
+							{{item.desc}}
 						</div>
 					</div>
-
 				</li>
-				<li>
-
-					<div class="cbot"><span class="fa fa-angle-double-down icon"></span></div>
-					<div class="contxt">
-						<div class="time">
-							<span>2000</span>年 ---
-						</div>
-						<div class="desc">
-							推出市区两级应用的一体化建设项目环评审批系统
-						</div>
-					</div>
-
-				</li>
-				<li></li>
-				<li></li>
+				
 			</ul>
 
 		</div>
@@ -47,7 +32,15 @@ export default {
   name: 'devHistory',
   data () {
     return {
-			msg: 'hello devHistory!'
+			msg: 'hello devHistory!',
+			hisList: [
+				{time: '2000', desc: '公司成立于深圳, 并成功推出首款产品"博安达数字环境信息网络系统", 提出了污染源全生命周期管理的理念, 并成功实施.'},
+				{time: '2001', desc: '公司成立圳, 并成功推出首款产品"博安达数字环源全生命周期管理的理念, 并成功实施.'},
+				{time: '2002', desc: '公司成立于深圳, 出首款产品"博安达数字环境信息网络系统", 提出了污染源全生命周期管理的理念, 并成功实施.'},
+				{time: '2006', desc: '公司成立, 并成功推出首款产品"博络系统", 提出了污染源全生命周期管理的理念, 并成功实施.'},
+				{time: '2010', desc: '公司成立于深圳, 并成功推出首款产品"博安达数字环源全生命周期管理的理念, 并成功实施.'},
+				{time: '2019', desc: '推出市区两级应用的一体化建设项目环评审批系统.'},
+			]
 		}
   },
 	methods: {}
@@ -76,7 +69,7 @@ export default {
 .course li {
 	position: relative;
 	width: 100%;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 }
 .course li .cbot {
 	position: absolute;
@@ -121,18 +114,49 @@ export default {
 
 .course li .contxt {
 	display: inline-block;
+	width: 100%;
 	padding-left: 40px;
 }
 
 .contxt .time{
 	display: inline-block;
-	float: left;
+	width: 100%;
 }
-.contxt .time span{}
+.contxt .time .timer {
+	font-size: 18px;
+	color: #0251d9;
+}
 .contxt .desc{
 	display: inline-block;
+	width: 100%;
 }
 
+@media (min-width: 768px) {
+	
+	.course li {
+		height: 60px;
+
+	}
+	.contxt {
+		height: 60px;
+		padding-top: 18px;
+	}
+	.contxt .time{
+		width: 15%;
+    height: 100%;
+    float: left;
+	}
+	.contxt .desc{
+		width: 84%;
+		height: 100%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.contxt .time{
+		width: 12%;
+	}
+}
 
 </style>
 

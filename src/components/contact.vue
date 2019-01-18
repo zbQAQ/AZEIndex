@@ -80,8 +80,7 @@ export default {
         position: [113.941146,22.527268],
         content: `
           <p>公司: 深圳安志生态环境有限公司</p>
-          <p style="width:354px;">地址: 深圳市南山区粤兴四道与高新南九道交叉口东100米 </p>
-          <p style="text-indent: 2.5em;">北航大厦A座8006 </p>
+          <p style="width:354px;">地址: 深圳市南山区粤兴四道与高新南九道交叉口东100米 北航大厦A座8006 </p>
         `,
         events: {},
         visible: true

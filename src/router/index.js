@@ -12,6 +12,7 @@ import honor from '@/components/aboutMe/honor'
 import cooperation from '@/components/aboutMe/cooperation'
 
 import Resolve from '@/components/resolve'
+import Cuscase from '@/components/cuscase'
 import Contact from '@/components/contact'
 
 
@@ -74,6 +75,11 @@ export default new Router({
       path:'/resolve',
       name:'Resolve',
       component: Resolve
+    },
+    {
+      path:'/cuscase',
+      name:'Cuscase',
+      component: Cuscase
     },
     {
       path:'/contact',
