@@ -132,6 +132,10 @@ export default {
     padding: 0;
     text-decoration: none;
 }
+    .hover {
+        margin-bottom: 15px;
+    }
+
     .hover a{
       text-decoration-line: none;
   }

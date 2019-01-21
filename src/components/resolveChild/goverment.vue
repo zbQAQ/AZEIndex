@@ -43,6 +43,9 @@ export default {
 }
 </script>
 <style scoped>
+  .hover {
+    margin-bottom: 15px;
+  }
   .hover a{
       text-decoration-line: none;
   }

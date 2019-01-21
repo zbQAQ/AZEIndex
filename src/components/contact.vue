@@ -1,24 +1,9 @@
 <template>
 	<div class="temp">
+    <actBox />
+
 		<div class="container cantactBox">
-      <div class="row">
 
-        <div class="col-md-12">
-          <div class="mapbox" id="mapbox">
-
-            <el-amap vid="amap" :zoom="zoom" :center="center" class="amap-demo">
-              <el-amap-info-window
-                :position="currentWindow.position"
-                :content="currentWindow.content"
-                :visible="currentWindow.visible"
-                :events="currentWindow.events">
-              </el-amap-info-window>
-            </el-amap>
-
-          </div>
-        </div>
-
-      </div>
       <div class="row">
 
         <div class="col-md-3 col-xs-6 iconItem">
@@ -62,7 +47,16 @@
 
     </div>
 
-    <actBox />
+    <div class="mapbox" id="mapbox">
+      <el-amap vid="amap" :zoom="zoom" :center="center" class="amap-demo">
+        <el-amap-info-window
+          :position="currentWindow.position"
+          :content="currentWindow.content"
+          :visible="currentWindow.visible"
+          :events="currentWindow.events">
+        </el-amap-info-window>
+      </el-amap>
+    </div>
 
 	</div>
 </template>
@@ -104,17 +98,22 @@ export default {
 .temp {
   margin-bottom: 50px;
 }
+.temp .contact {
+  background: #fff;
+  padding-top: 55px;
+}
 .cantactBox {
-  margin-top: 40px;
+  /* margin-top: 40px; */
   margin-bottom: 50px;
 }
 .mapbox {
-  height: 400px;
+  height: 280px;
+  margin-bottom: 50px;
 }
 
 .cantactBox .iconItem {
   text-align: center;
-  padding: 30px 0 10px;
+  padding: 30px 0;
 }
 .cantactBox .iconItem .myIcon{
   font-size: 24px;
@@ -151,6 +150,11 @@ export default {
   font-size: 13px;
 }
 
+@media (min-width: 768px) {
+  .mapbox {
+    height: 400px;
+  }
+}
 
 
 </style>

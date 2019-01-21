@@ -63,7 +63,7 @@ export default {
    }    
 }
 </script>
-<style>
+<style scoped>
    .box1{
        border-bottom: 1px solid #ccc;
        padding: 20px 0;
@@ -84,8 +84,11 @@ export default {
        line-height: 2.2;
        text-indent:2em;
    }
+   .box2 .img{
+       text-align: center;
+    }
    .box2 img{
-    width: 600px;
+        max-width: 600px;
    }
    .box .img{
        
@@ -95,8 +98,12 @@ export default {
 
    }
    .box3 .box3-img{
-       width: 600px;
+       text-align: center;
    }
+    .box3 .box3-img img {
+        max-width: 600px;
+    }
+
    .box3 .box3-p{
        font-size: 16px;
        line-height: 2.2;

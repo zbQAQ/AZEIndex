@@ -45,7 +45,7 @@
 					<div class="videoBox">
 
 						<video controls="controls" autoplay="autoplay" height="450" width="100%" 
-							src="static/video.mp4">
+							src="">
 							Your browser does not support the video tag.
 						</video>
 

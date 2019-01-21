@@ -24,6 +24,8 @@ export default {
 	/* position: relative; */
 	position: fixed;
 	bottom: 0;
+	z-index: 99999;
+
 }
 .myfooter {
 	position: absolute;

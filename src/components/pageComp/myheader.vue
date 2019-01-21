@@ -44,6 +44,33 @@ export default {
       curPage: 'home'
     }
   },
+  mounted() {
+    let regExp1 = /\/(\S*)\//  //有子路由的正则
+    let regExp2 = /\/(\S*)/    //没有子路由的正则
+    let path = this.$route.path
+    let hasNum = 0
+
+    path.split('').map(v => {
+      if(v === '/') {hasNum++}
+    })
+
+    if(hasNum > 1) {
+      path = path.match(regExp1)[1]
+    }else {
+      path = path.match(regExp2)[1]
+    }
+
+    //同步新闻详情和方案详情
+    if(path === 'NewsChild') {
+      path = 'news'
+    }else if(path === 'resoDetail') {
+      path = 'resolve'
+    }
+
+
+    this.curPage = path
+
+  },
   methods: {
     changePath(name) {
       this.curPage = name

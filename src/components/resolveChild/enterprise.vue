@@ -136,6 +136,18 @@ export default {
       color:cornflowerblue;
   }
 
+    @media (max-width: 768px) {
+        .container .row img {
+            width: 100%;
+        }
+        .container .row .col-md-4 {
+            left: 0;
+        }
+        #right, #zx {
+            left: 0;
+        }
+    }
+
 </style>
 
 
