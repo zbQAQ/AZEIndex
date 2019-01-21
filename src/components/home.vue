@@ -156,7 +156,7 @@ export default {
 		height: auto;
 	}
 	.content .imgTips {
-		transform: translateY(60%);
+		transform: translateY(58%);
 	}
 }
 @media (min-width: 992px) {
@@ -164,10 +164,10 @@ export default {
 		margin-bottom: 0;
 	}
 	.contLeft .imgTips {
-		transform: translateY(58%);
+		transform: translateY(63%);
 	}
 	.content .contRight .imgTips {
-		transform: translateY(69%);
+		transform: translateY(65%);
 	}
 	.contRight .rightTop,
 	.contRight .rightBottom {
@@ -178,9 +178,9 @@ export default {
 	}
 
 }
-@media (min-width: 1200px) {
+@media (min-width: 1200px) {	
 	.content .contRight .imgTips {
-		transform: translateY(63%)
+		transform: translateY(60%)
 	}
 }
 
