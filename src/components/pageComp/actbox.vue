@@ -91,6 +91,7 @@ export default {
 .actItem .newsItem {
   padding-left: 1.2rem;
 	margin-bottom: 20px;
+  text-align: center;
 }
 .actItem .newsItem .nTime {
 	color: #636363;
@@ -123,7 +124,8 @@ export default {
 		text-align: left;
 		border-right: 5px solid transparent;
 	}
-	.contact .actItem.act {
+	.contact .actItem.act,
+  .contact .actItem .newsItem {
 		text-align: left;
 	}
 }

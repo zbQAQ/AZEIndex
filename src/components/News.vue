@@ -124,6 +124,7 @@ export default {
 }
     .container {
         margin-top: 70px;
+        margin-bottom: 50px;
         /* line-height: auto; */
     }
     .news1{
@@ -166,6 +167,17 @@ export default {
         top: -20px;
         right: -40px;
     }
+    .p{
+       color: #ccc;
+       position: relative;
+       top: 0px;
+       right: 0px;
+    }
+    @media (min-width: 992px) {
+        .p{
+            top: 35px;
+        }
+    }
     @media (max-width: 992px) {
         .col-md-10{
             top: 0;
@@ -198,8 +210,8 @@ export default {
         }
         .col-md-10 .news11{
             margin-left: 20px;
-
         }
+        
 
     }
     /*中等屏幕   w >= 992  && w<1200*/
@@ -209,10 +221,5 @@ export default {
             background-color: pink;
         }
     } */
-   .p{
-       color: #ccc;
-       position: relative;
-       top: 35px;
-       right: 0px;
-   }
+   
 </style>

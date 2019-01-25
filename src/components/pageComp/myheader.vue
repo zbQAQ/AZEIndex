@@ -16,11 +16,12 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right myNavCollapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav myNav">
+        <div class="collapse navbar-collapse navbar-right myNavCollapse" id="bs-example-navbar-collapse-1" >
+          <ul class="nav navbar-nav myNav" id="navbar">
             <li v-for="(item, index) in navlist" :key="index" v-bind:class="{'active':curPage === item.path}">
               <a :href="'#/' + item.path" @click="changePath(item.path)">{{item.name}}</a>
             </li>
+            
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -41,7 +42,7 @@ export default {
         {path: 'cuscase', name: '客户案例'},
         {path: 'contact', name: '联系我们'},
       ],
-      curPage: 'home'
+      curPage: 'home',
     }
   },
   mounted() {
@@ -67,9 +68,21 @@ export default {
       path = 'resolve'
     }
 
-
     this.curPage = path
-
+    
+    $(window).scroll(function () {
+      //小屏幕下的导航条折叠
+      if ($(window).width() < 768) {
+        //点击导航链接之后，把导航选项折叠起来
+        $(".myNavCollapse li").click(function () {
+          $(".myNavCollapse").collapse('hide');
+        });
+        //滚动屏幕时，把导航选项折叠起来
+        $(window).scroll(function () {
+          $(".myNavCollapse").collapse('hide');
+        });
+      }
+    });
   },
   methods: {
     changePath(name) {
@@ -77,6 +90,8 @@ export default {
     }
   }
 }
+
+
 </script>
 
 <style scoped>
@@ -89,6 +104,7 @@ export default {
 .myNavbar{
   background: #0251d9;
   border-radius: 0px;
+  border-width: 0 0 0px;
 }
 .myNavbar .myContainer {
   height: 70px;
