@@ -11,8 +11,8 @@
             <span class="fa fa-list-alt fa-lg"></span>
           </div>
           <div class="itemTxt">
-            <p class="tTitle">证券简称</p>
-            <span class="tName">安志生态</span>
+            <p class="tTitle">公司名称</p>
+            <span class="tName">安志生态环保有限公司</span>
           </div>
         </div>
         <div class="col-md-3 col-xs-6 iconItem">
@@ -20,8 +20,8 @@
             <span class="fa fa-level-up fa-lg"></span>
           </div>
           <div class="itemTxt">
-            <p class="tTitle">证券代码</p>
-            <span class="tName">1433223</span>
+            <p class="tTitle">传真</p>
+            <span class="tName">0755-22672445</span>
           </div>
         </div>
         <div class="col-md-3 col-xs-6 iconItem">
@@ -30,7 +30,7 @@
           </div>
           <div class="itemTxt">
             <p class="tTitle">电话</p>
-            <span class="tName">13045887789</span>
+            <span class="tName">13751082562</span>
           </div>
         </div>
         <div class="col-md-3 col-xs-6 iconItem">
@@ -39,7 +39,7 @@
           </div>
           <div class="itemTxt">
             <p class="tTitle">邮箱</p>
-            <span class="tName">1290368140@qq.com</span>
+            <span class="tName">alucard263096@126.com</span>
           </div>
         </div>
 

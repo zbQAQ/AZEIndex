@@ -17,10 +17,6 @@ import ResoDetail from '@/components/resoDetail'
 import Cuscase from '@/components/cuscase'
 import Contact from '@/components/contact'
 
-import Goverment from '@/components/resolveChild/goverment'
-import Public   from '@/components/resolveChild/public'
-import Enterprise   from '@/components/resolveChild/enterprise'
-
 Vue.use(Router)
 
 export default new Router({
@@ -42,7 +38,7 @@ export default new Router({
     {
       path:'/NewsChild',
       name:'NewsChild',
-      component:NewsChild
+      component: NewsChild
     },
     {
       path:'/aboutme',
@@ -84,27 +80,6 @@ export default new Router({
       path:'/resolve',
       name:'Resolve',
       component: Resolve,
-      children:[
-        {
-          path: '/',
-          redirect: 'goverment'
-        },
-        {
-          path:'goverment',
-          name:'Goverment',
-          component:Goverment
-        },
-        {
-          path:'public',
-          name:'Public',
-          component:Public,
-        },
-        {
-          path:'enterprise',
-          name:'Enterprise',
-          component:Enterprise
-        },
-      ]
     },
     {
       path: '/resoDetail',

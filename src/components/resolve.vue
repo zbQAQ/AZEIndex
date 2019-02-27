@@ -1,233 +1,136 @@
 <template>
-   <div class="resolve">
+  <div class="resolve">
     <div class="container">
-        <!-- <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="#">公众</a></li>
-            <li role="presentation"><a href="#">企业</a></li>
-            <li role="presentation"><a href="#">政府</a></li>
-        </ul> -->
-        <div class="row">
-           <div class="col-md-4 topNav">
-               <div class="router" v-bind:class="{'pageActive':page === 'goverment'}" @click="changePage('goverment')">
-                   <router-link to="goverment">
-                       <div>
-                         公众   
-                       </div>
-                   </router-link>
-                   <!-- <router-link to="Goverment" v-if="show"  class="btn btn-default" data-toggle="tooltip" 
-                   data-placement="left" title="深圳市人民政府" @click="show()">政府</router-link> -->
-               </div>
-               
-           </div>
-        
-            <div class="col-md-4 topNav">
-                <div class="router" v-bind:class="{'pageActive':page === 'enterprise'}" @click="changePage('enterprise')">
-                   <router-link to="enterprise"  data-toggle="tooltip" data-placement="left" title="某某企业" @click="hide()">
-                       <div>
-                           企业
-                       </div>
-                   </router-link>
-                </div>
-            </div>
-            <div class="col-md-4 topNav goverment">
-                <div class="router" v-bind:class="{'pageActive':page === 'public'}" @click="changePage('public')">
-                    <router-link to="public">
-                        <div>政府</div>
-                    </router-link>
-                    <!-- <router-link to="public" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="">公众</router-link> -->
-                </div>
-            </div>
-            <div class="col-md-12 resView">
-                <router-view></router-view>
-            </div>
+			<div class="topTit">
+				历史解决方案
+			</div>
+      <div class="row">
+        <div class="item col-md-4" v-for="(item, index) of list" :key="index" @click="goResDetail(item.id)">
+					<div class="itemBox">
+						<div class="thumb">
+							<img :src="item.imgUrl" alt>
+						</div>
+						<p>{{item.name}}</p>
+					</div>
         </div>
+      </div>
     </div>
-	
-    <actBox />
-    
-  </div>		
+
+    <actBox/>
+  </div>
 </template>
 <script>
-import actBox from './pageComp/actbox'
+import actBox from "./pageComp/actbox";
 export default {
-    name:'resolve',
-    data(){
-        return{
-            msg:'hello resolve',
-            page: 'goverment'
-        }
-    },
-    methods:{
-         show(){
-            //  alert(1);
-             show:true
-         },
-         hide(){
-
-         },
-         changePage(page) {
-            this.page = page
-         }
-    },
-    components: {
-        actBox
-    }
-}
-
+  name: "resolve",
+  data() {
+    return {
+      msg: "hello resolve",
+      list: [
+				{
+					id: 1,
+					name: '水质监测网格化',
+					imgUrl: '/static/img/resolve/resolve12.jpg'
+				},
+				{
+					id: 2,
+					name: '城市地下管网水质在线监测系统',
+					imgUrl: '/static/img/resolve/resolve8.jpg'
+				},
+				{
+					id: 3,
+					name: '无人船监测系统',
+					imgUrl: '/static/img/resolve/resolve3.jpg'
+				},
+				{
+					id: 4,
+					name: '大气环境移动监测方案',
+					imgUrl: '/static/img/resolve/resolve14.jpg'
+				},
+				{
+					id: 5,
+					name: '高光谱监测系统',
+					imgUrl: '/static/img/resolve/resolve2.jpg'
+				},
+				{
+					id: 6,
+					name: '汽车尾气遥感监控系统',
+					imgUrl: '/static/img/resolve/resolve11.jpg'
+				},
+				{
+					id: 7,
+					name: '餐饮油烟监管系统',
+					imgUrl: '/static/img/resolve/resolve16.jpg'
+				},
+				{
+					id: 8,
+					name: '固废环境精细化管理系统',
+					imgUrl: '/static/img/resolve/resolve17.jpg'
+				},
+				{
+					id: 9,
+					name: '蚀刻液综合处理监管系统',
+					imgUrl: '/static/img/resolve/resolve15.jpg'
+				},
+				{
+					id: 10,
+					name: '环保税智慧管理系统',
+					imgUrl: '/static/img/resolve/resolve10.jpg'
+				},
+				{
+					id: 11,
+					name: '医院环境综合管理系统',
+					imgUrl: '/static/img/resolve/resolve13.jpg'
+				},	
+			]
+    };
+  },
+  methods: {
+		goResDetail(id) {
+			this.$router.push({path: '/resoDetail', query: { id: id }})
+		}
+	},
+  components: {
+    actBox
+  }
+};
 </script>
 <style scoped>
-
-    .resolve {
-        margin-bottom: 50px;
-    }
-
-   .container{
-       margin-top: 16px;
-	   border: 1px #ccc solid;
-	   padding-bottom: 20px;
-       margin-bottom: 20px;
-   }
-   .container .nav li{
-       width: 370px;
-       height: 50px;
-       line-height: 50px;
-       
-   }
-    .container  .nav{
-       height: 40px;
-    }
-    .row .router{
-       width: 390px;
-       height: 60px;
-       color: #787878;
-       font-size: 26px;
-       background-color: #f8f8f8;
-	   position: relative;
-	   top:0;
-	   left: -15px;
-       border: 1px solid #f8f8f8;
-       border-bottom-color: #eee;
-       text-align: center;
-       line-height: 60px;
-   }
-    .container .row .router.pageActive {
-        background: #fff;
-        border-bottom: none;
-    }
-    .container .row .router.pageActive a {
-        color: #666;
-    }
-   /* 没有效果 */
-   .row .router:horizontal{
-       text-decoration: none;
-       background-color: white;
-       color: #20ACE6;
-       border-top:blue 4px solid;
-       border-bottom: none;
-       border-left:none;
-   }
-   .app{
-       margin-top:16px;
-   }
-   .zhengfu{
-       
-   }
-   .col-md-3 .img{
-       /* margin: 10px; */
-       position: relative;
-       top: 80px;
-       right: -76px;
-   }
-   .col-md-3 .img img{
-       width: 200px;
-       height: auto;
-   }
-   .col-md-4 .img:hover{
-	   text-decoration-line: none;
-   }
-   .col-md-4 .hover:hover{
-	   color: #0251D9;
-	   cursor: pointer;
-	   
-   }
-   .col-md-4 .img span{
-	   font-size: 20px;
-	   position: relative;
-	   top: 0;
-	   left: 8px;
-	   
-   }
-   .col-md-4 .img .img-box{
-	   margin: 10px;
-   }
-   .container2{
-	   background-color: #f1f1f1;
-	   width: 100%;
-	   height: 520px;
-	   display: inline-block;
-	   padding: 0 324px;;
-   }
-   /* .row{
-	   text-align:center;
-	   
-   } */
-   .container2 .row .col-md-4{
-	   padding: 20px;
-   }
-   .title{
-	   font-size: 24px;
-    color: #333;
-    /* float: left; */
-    position: relative;
-    /* padding-left: 11px; */
-	border-left: #20ACE6 solid 4px;
-	font-weight: bold;
-    margin: 30px 0;
-    
-   }
-   .news a{
-      padding: 20px 0;
-      line-height: 40px;
-      text-decoration-line: none;
-      font-size: 16px;
-      font-weight: 700;
-      color: black;
-   }
-   .news a:hover{
-       color: #20ACE6;
-   }
-   .news ul{
-       width: 100%;
-       list-style-type: none; 
-   }
-   .news ul p{
-       color: #ccc;  
-   }
-
-   .contact-information ul li{
-       width: 100%;
-       list-style-type: none;
-       line-height: 44px; 
-   }
-   .contact-information p{
-       font-weight: 700;
-   }
-   .resolve{
-       /* margin: 20px; */
-   }
-   .resView{
-       padding-top: 15px;
-   }
-
-    @media (max-width: 992px) {
-        .topNav {
-            padding-left: 0px;
-            padding-right: 0px;
-        }
-        .topNav .router{
-            width: 100%;
-            left: 0;
-        }
-    }
-
+.resolve {
+}
+.container {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+.container .topTit {
+	font-size: 22px;
+	font-weight: 700;
+	text-align: center;
+	padding-bottom: 15px;
+	margin-bottom: 25px;
+	border-bottom: 1px solid #eee;
+}
+.container .item {
+	margin-bottom: 35px;
+  transition: 0.3s ease;
+}
+.container .item:hover {
+	transform: translateY(-10px);
+}
+.container .item .itemBox {
+	box-shadow: 2px 2px 5px #999;
+	border-radius: 2px;
+	overflow: hidden;
+}
+.container .item .thumb {
+  /* border: 1px solid #a7a4a4; */
+  /* border-bottom: none; */
+}
+.container .item p {
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 0;
+  /* border: 1px solid #a7a4a4; */
+  /* border-top: none; */
+}
 </style>

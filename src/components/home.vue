@@ -4,32 +4,32 @@
 		<carousel> </carousel>
 
 		<div class="content container">
-			<div class="row">
-				<div class="col-md-6 contLeft">
+			<div class="row">	
+				<div class="col-md-6 contLeft" @click="toAboutme">
 					<img src="../assets/image/proimg1.jpg" alt="">
 					<div class="imgTips">
-						<h3>生态环境监察执法</h3>
-						<p class="tipsTxt">包括环境执法、网格化巡查、行政处罚、环境信访、环境稽查、排污申报、在线监控以及环保督察、环保专项督查等业务，通过创新环境执法手段，为环保执法工作上升到一个新台阶提供了有力的技术保障，达到了规范行为、落实责任、提高效率的目的。</p>
+						<h3>智慧生态环保系统</h3>
+						<p class="tipsTxt">环保咨询、环境监测、环境治理、环保管家服务等</p>
 					</div>
 					<div class="bottom"></div>
 				</div>
 				<div class="col-md-6 contRight">
 
-					<div class="col-md-12 rightTop">
+					<div class="col-md-12 rightTop" @click="toAboutme">
 						<img src="../assets/image/proimg2.jpg" alt="">
 						<div class="imgTips">
-							<h3>生态环境监察执法</h3>
-							<p class="tipsTxt">包括环境执法、网格化巡查、行政处罚、环境信访、环境稽查、排污申报、在线监控以及环保督察、环保专项督查等业务，通过创新环境执法手段，为环保执法工作上升到一个新台阶提供了有力的技术保障，达到了规范行为、落实责任、提高效率的目的。</p>
+							<h3>设备智能制造</h3>
+							<p class="tipsTxt">生态环保监测、治理设备等</p>
 						</div>
 					</div>
 
 					<div class="col-md-12 boxMargin">间隔区</div>
 
-					<div class="col-md-12 rightBottom">
+					<div class="col-md-12 rightBottom" @click="toAboutme">
 						<img src="../assets/image/proimg3.jpg" alt="">
 						<div class="imgTips">
-							<h3>生态环境监察执法</h3>
-							<p class="tipsTxt">包括环境执法、网格化巡查、行政处罚、环境信访、环境稽查、排污申报、在线监控以及环保督察、环保专项督查等业务，通过创新环境执法手段，为环保执法工作上升到一个新台阶提供了有力的技术保障，达到了规范行为、落实责任、提高效率的目的。</p>
+							<h3>创新服务</h3>
+							<p class="tipsTxt">环保税、绿色金融、绿色保险等</p>
 						</div>
 					</div>
 
@@ -74,6 +74,11 @@ export default {
 	mounted:function(){
 			// alert("欢迎来到安志生态环境有限公司");
 	},
+	methods: {
+		toAboutme() {
+			this.$router.push({ path: '/aboutme' })
+		}
+	},
 	components: {
 		carousel, actBox
 	}
@@ -105,15 +110,15 @@ export default {
 	background: rgba(0,0,0,0.4);
 	color: #fff;
 	transition: 0.5s ease;
-	transform: translateY(70%);
+	/* transform: translateY(70%); */
 }
 .content .imgTips .tipsTxt {
-	height: 120px;
+	/* height: 120px; */
 	overflow: hidden;
 	margin-top: 20px;
 }
 .contLeft:hover .imgTips{
-	transform: translateY(0)
+	/* transform: translateY(0) */
 }
 .content .bottom {
 	position: absolute;
@@ -128,7 +133,7 @@ export default {
 .contRight .imgTips{
 	width: calc(100% - 15px);
 	bottom: 0;
-	transform: translateY(70%);
+	/* transform: translateY(70%); */
 }
 .contRight .rightTop {
 	height: 220px;
@@ -145,18 +150,18 @@ export default {
 }
 .contRight .imgTips .tipsTxt{
 	margin-top: 10px;
-	height: 120px;
+	/* height: 120px; */
 }
 .contRight .rightTop:hover .imgTips,
 .contRight .rightBottom:hover .imgTips {
-	transform: translateY(0)
+	/* transform: translateY(0) */
 }
 @media (min-width: 523px) {
 	.content .imgTips .tipsTxt {
 		height: auto;
 	}
 	.content .imgTips {
-		transform: translateY(58%);
+		/* transform: translateY(58%); */
 	}
 }
 @media (min-width: 992px) {
@@ -164,10 +169,10 @@ export default {
 		margin-bottom: 0;
 	}
 	.contLeft .imgTips {
-		transform: translateY(63%);
+		/* transform: translateY(63%); */
 	}
 	.content .contRight .imgTips {
-		transform: translateY(65%);
+		/* transform: translateY(65%); */
 	}
 	.contRight .rightTop,
 	.contRight .rightBottom {
@@ -180,7 +185,7 @@ export default {
 }
 @media (min-width: 1200px) {	
 	.content .contRight .imgTips {
-		transform: translateY(60%)
+		/* transform: translateY(60%) */
 	}
 }
 

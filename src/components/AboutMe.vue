@@ -14,7 +14,7 @@
       </router-link>
 
       <router-link class="leftItem" to="cooperation">
-        <div class="aze" @click="abouteChange('cooperation')">产学研合作</div>
+        <div class="aze" @click="abouteChange('cooperation')">合作伙伴</div>
       </router-link>
     </div>
     <div class="col-md-9 col-xs-12">

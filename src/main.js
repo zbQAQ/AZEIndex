@@ -21,12 +21,6 @@ VueAMap.initAMapApiLoader({
   v: '1.4.4'
 });
 
-
-
-
-
-
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

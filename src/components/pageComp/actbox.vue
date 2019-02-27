@@ -12,11 +12,11 @@
           </div>
           <div class="newsItem">
             <a href="#" class="nLink">广饶县开展网格化环境监管平台上线培训</a>
-            <p class="nTime">2017-12-26</p>
+            <p class="nTime">2017-12-11</p>
           </div>
           <div class="newsItem">
             <a href="#" class="nLink">广饶县开展网格化环境监管平台上线培训</a>
-            <p class="nTime">2017-12-26</p>
+            <p class="nTime">2017-12-24</p>
           </div>
 
         </div>
@@ -27,21 +27,24 @@
             总部地址: <span>深圳市南山区粤兴四道与高新南交汇处北航大厦8楼8006</span>
           </p>
           <p class="phone">
-            联系电话: <span>0755-26734049</span>
+            联系电话: <span>13751082562</span>
           </p>
           <p class="landline ">
-            座机号码: <span>26734049-8002</span>
+            座机号码: <span>0755-22672445</span>
           </p>
-          <p class="QQnumber">
+          <!-- <p class="QQnumber">
             联系QQ: <span>674418063，2725424670</span>
+          </p> -->
+          <p class="fax">
+            传 真: <span>0755-22672445 </span>
           </p>
 
         </div>
         <div class="col-xs-12 col-sm-12 col-md-2 actItem">
 
-          <div class="qrCode">
+          <!-- <div class="qrCode">
             <img src="../../assets/image/qrcodeimg.png" alt="微信二维码">
-          </div>
+          </div> -->
 
         </div>
 

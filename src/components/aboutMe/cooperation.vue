@@ -2,10 +2,10 @@
 	<div class="cooperation">
 
 		<div class="box">
-      <span class="">产学研合作</span>
+      <span class="">合作伙伴</span>
     </div>
     <div class="box2">
-      <img src="../../assets/image/cooperation.jpg" alt="">
+      <img src="../../assets/image/cooperation.png" alt="">
     </div>
 	</div>
 </template>
