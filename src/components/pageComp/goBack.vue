@@ -28,7 +28,7 @@ export default {
 <style scoped>
 .backBox {
   position: fixed;
-  right: 100px;
+  right: 5%;
   bottom: 100px;
   text-align: center;
   cursor: pointer;
