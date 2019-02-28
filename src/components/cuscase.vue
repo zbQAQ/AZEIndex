@@ -2,9 +2,9 @@
 	<div class="temp">
 		<div class="container">
       <div class="caseBox">
-        <h3 class="caseTit">博安达客户案例区域分布图</h3>
+        <h3 class="caseTit">安志生态客户案例区域分布图</h3>
         <div class="caseMap">
-          <img src="../assets/image/ch-map.jpg" alt="">
+          <img src="/static/img/ch-map.jpg" alt="">
 
           <div class="mapBot guangdong">
             <div class="botName">

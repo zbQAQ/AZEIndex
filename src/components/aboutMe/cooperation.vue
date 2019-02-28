@@ -5,7 +5,7 @@
       <span class="">合作伙伴</span>
     </div>
     <div class="box2">
-      <img src="../../assets/image/cooperation.png" alt="">
+      <img src="/static/img/cooperation.png" alt="">
     </div>
 	</div>
 </template>

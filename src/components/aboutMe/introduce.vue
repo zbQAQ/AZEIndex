@@ -4,7 +4,7 @@
       <span class="">公司简介</span>
     </div>
     <div class="box2">
-      <img src="../../assets/image/about1.jpg" class="img-responsive" alt="公司简介">
+      <img src="/static/img/about1.png" class="img-responsive" alt="公司简介">
     </div>
     <div class="box5">
       <div class="box5-p1">

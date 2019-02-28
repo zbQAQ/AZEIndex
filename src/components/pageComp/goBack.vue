@@ -12,6 +12,7 @@
 <script>
 export default {
   name: "goback",
+  props: ['upPath'],
   data() {
     return {
       msg: "this is goback components"
@@ -19,7 +20,12 @@ export default {
   },
   methods: {
     goBack() {
-      this.$router.go(-1)
+      let path = this.upPath?this.upPath:-1
+      if(path != -1) {
+        this.$router.push({path: path})
+      }else {
+        this.$router.go(-1)
+      }
     }
   }
 };

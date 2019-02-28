@@ -87,7 +87,7 @@ export default {
   },
   methods: {
 		goResDetail(id) {
-			this.$router.push({path: '/resoDetail', query: { id: id }})
+			this.$router.push({path: '/resoDetail', query: { resoId: id }})
 		}
 	},
   components: {
@@ -97,6 +97,7 @@ export default {
 </script>
 <style scoped>
 .resolve {
+	margin-bottom: 50px;
 }
 .container {
   padding-top: 55px;

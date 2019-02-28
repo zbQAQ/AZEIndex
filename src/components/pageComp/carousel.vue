@@ -6,20 +6,25 @@
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
       </ol>
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner myInner" role="listbox">
-        <div class="item">
-          <img src="../../assets/image/carousel4.jpg" style="position: static;margin-left:0;" alt="carousel">
-          <div class="carousel-caption"></div>
-        </div>
         <div class="item active">
-          <img src="../../assets/image/carousel2.jpg" alt="carousel">
+          <img src="/static/img/carousel4.png" alt="carousel">
+          <div class="carousel-caption"></div>
+        </div>
+        <div class="item ">
+          <img src="/static/img/carousel2.jpg" alt="carousel">
           <div class="carousel-caption"></div>
         </div>
         <div class="item">
-          <img src="../../assets/image/carousel3.jpg" alt="carousel">
+          <img src="/static/img/carousel3.jpg" alt="carousel">
+          <div class="carousel-caption"></div>
+        </div>
+        <div class="item ">
+          <img src="/static/img/carousel1.jpg" alt="carousel">
           <div class="carousel-caption"></div>
         </div>
       </div>
@@ -85,10 +90,10 @@ export default {
 
 @media (min-width: 1170px) {
   .myCarousel .myInner .item img {
-    position: relative;
+    /* position: relative;
     top: 0;
     left: 50%;
-    margin-left: -683px;
+    margin-left: -683px; */
   }
 }
 

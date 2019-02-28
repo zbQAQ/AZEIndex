@@ -136,7 +136,7 @@ export default {
   },
 	methods: {},
   created() {
-		this.detailId = this.$route.query.id
+		this.detailId = this.$route.query.resoId
 	},
 	components: {
 		goBack

@@ -6,7 +6,7 @@
 		<div class="content container">
 			<div class="row">	
 				<div class="col-md-6 contLeft" @click="toAboutme">
-					<img src="../assets/image/proimg1.jpg" alt="">
+					<img src="/static/img/proimg1.jpg" alt="">
 					<div class="imgTips">
 						<h3>智慧生态环保系统</h3>
 						<p class="tipsTxt">环保咨询、环境监测、环境治理、环保管家服务等</p>
@@ -16,7 +16,7 @@
 				<div class="col-md-6 contRight">
 
 					<div class="col-md-12 rightTop" @click="toAboutme">
-						<img src="../assets/image/proimg2.jpg" alt="">
+						<img src="/static/img/proimg2.jpg" alt="">
 						<div class="imgTips">
 							<h3>设备智能制造</h3>
 							<p class="tipsTxt">生态环保监测、治理设备等</p>
@@ -26,7 +26,7 @@
 					<div class="col-md-12 boxMargin">间隔区</div>
 
 					<div class="col-md-12 rightBottom" @click="toAboutme">
-						<img src="../assets/image/proimg3.jpg" alt="">
+						<img src="/static/img/proimg3.jpg" alt="">
 						<div class="imgTips">
 							<h3>创新服务</h3>
 							<p class="tipsTxt">环保税、绿色金融、绿色保险等</p>
@@ -38,7 +38,7 @@
 			<div class="row"></div>
 		</div>
 
-		<div class="contVideo container">
+		<!-- <div class="contVideo container">
 			<div class="row">
 				<div class="col-md-12">
 
@@ -53,7 +53,7 @@
 
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<actBox />
 			

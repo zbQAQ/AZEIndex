@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/home'
 import News from '@/components/news'
-import NewsChild from '@/components/news-child/news-child'
+import NewsChild from '@/components/newsChild'
 
 import AboutMe from '@/components/aboutMe'
 // children route
@@ -36,7 +36,7 @@ export default new Router({
       component: News
     },
     {
-      path:'/NewsChild',
+      path:'/newsChild',
       name:'NewsChild',
       component: NewsChild
     },

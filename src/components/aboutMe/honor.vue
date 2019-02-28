@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="box2">
-      <img src="../../assets/image/honor-img.jpg" class="img-responsive" alt="公司简介">
+      <img src="/static/img/honor-img.jpg" class="img-responsive" alt="公司简介">
     </div>
     
 
