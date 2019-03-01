@@ -62,6 +62,20 @@ export default {
 					imgUrl: '',
 					time: '2019-02-20 10:10'
 				},
+				{
+					id: 6,
+					title: '餐饮企业开业及环保指引',
+					desc: '餐饮企业开业及环保指引',
+					imgUrl: '',
+					time: '2019-03-1 11:15'
+				},
+				{
+					id: 7,
+					title: '深圳着力打造排污许可“特区模式” 做好“加减乘除”，全面推动排污许可制度改革落地见效',
+					desc: '排污许可制度改革以来，广东省深圳市两年累计高质量完成12个重点行业、268家企业的国家排污许可证核发，并成为全国电镀工业排污许可管理试点城市，核发全省第一张电镀工业排污许可证。',
+					imgUrl: '',
+					time: '2019-02-20 10:10'
+				},
 			]
     };
 	},
@@ -96,6 +110,7 @@ export default {
 }
 .newsCnt .itemNews .itemShadow {
 	overflow: hidden;
+	padding-top: 8px;
 	transition: 0.3s ease;
 }
 .newsCnt .itemNews:hover .itemShadow {
@@ -157,6 +172,10 @@ export default {
 @media (min-width: 768px) {
 	.newsCnt .itemNews {
 		flex-direction: row;
+	}
+	.newsCnt .itemNews .itemShadow {
+		min-width: 100%;
+		margin: 0;
 	}
 }
 @media (min-width: 992px) {
