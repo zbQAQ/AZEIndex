@@ -1,0 +1,39 @@
+.box {
+  background-color: #ededed;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+	border-left: 5px #20ace6 solid;
+	padding-left: 10px;
+}
+
+.proBox {
+  margin-top: 15px;
+}
+.proBox .proItem {
+  margin-bottom: 15px;
+  cursor: pointer;
+  text-align: center;
+
+}
+.proBox .proItem:hover img {
+  transform: translateY(-2%)
+}
+.proBox .proItem:hover p { 
+  color: #000;
+}
+.proBox .proItem img,
+.proBox .proItem p {
+  transition: 0.4s ease;
+}
+.proBox .proItem img {
+  width: 230px;
+  height: 250px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.proBox .proItem p {
+  margin: 5px 0;
+  line-height: 20px;
+  color: #666;
+}

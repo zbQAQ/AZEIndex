@@ -11,11 +11,18 @@ import Culture from '@/components/aboutMe/culture'
 import devHistory from '@/components/aboutMe/devHistory'
 import honor from '@/components/aboutMe/honor'
 import cooperation from '@/components/aboutMe/cooperation'
+import aboutMeContact from '@/components/aboutMe/contact'
+
+// products children
+import proAir from '@/components/products/proAir'
+import proWater from '@/components/products/proWater'
+import proDetail from '@/components/products/proDetail'
 
 import Resolve from '@/components/resolve'
 import ResoDetail from '@/components/resoDetail'
 import Cuscase from '@/components/cuscase'
 import Contact from '@/components/contact'
+import products from '@/components/products'
 
 Vue.use(Router)
 
@@ -74,6 +81,11 @@ export default new Router({
           name: 'cooperation',
           component: cooperation
         },
+        { //联系我们
+          path: 'contact',
+          name: 'aboutMeContact',
+          component: aboutMeContact
+        },
       ]
     },
     {
@@ -95,6 +107,32 @@ export default new Router({
       path:'/contact',
       name:'Contact',
       component: Contact
+    },
+    {
+      path:'/products',
+      name:'products',
+      component: products,
+      children: [
+        {
+          path: '/',
+          redirect: 'proAir'
+        },
+        {
+          path: 'proAir',
+          name: 'proAir',
+          component: proAir
+        },
+        {
+          path: 'proWater',
+          name: 'proWater',
+          component: proWater
+        },
+        {
+          path: 'proDetail',
+          name: 'proDetail',
+          component: proDetail
+        }
+      ]
     },
   ]
 })

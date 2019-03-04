@@ -15,10 +15,10 @@
           <div class="title">联系我们</div>
 
           <p class="address">
-            总部地址: <span>深圳市南山区粤兴四道与高新南交汇处北航大厦8楼8006</span>
+            公司地址: <span>深圳市南山区粤兴四道与高新南交汇处北航大厦8楼8006</span>
           </p>
           <p class="phone">
-            联系电话: <span>13751082562</span>
+            <!-- 联系电话: <span>13751082562</span> -->
           </p>
           <p class="landline ">
             座机号码: <span>0755-22672445</span>
@@ -28,6 +28,9 @@
           </p> -->
           <p class="fax">
             传 真: <span>0755-22672445 </span>
+          </p>
+          <p class="fax">
+            邮 箱: <span>az@anzhie.com </span>
           </p>
 
         </div>

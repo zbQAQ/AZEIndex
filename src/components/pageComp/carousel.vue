@@ -6,7 +6,7 @@
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        <!-- <li data-target="#carousel-example-generic" data-slide-to="3"></li> -->
       </ol>
 
       <!-- Wrapper for slides -->
@@ -23,10 +23,10 @@
           <img src="/static/img/carousel3.jpg" alt="carousel">
           <div class="carousel-caption"></div>
         </div>
-        <div class="item ">
+        <!-- <div class="item ">
           <img src="/static/img/carousel1.jpg" alt="carousel">
           <div class="carousel-caption"></div>
-        </div>
+        </div> -->
       </div>
 
       <!-- Controls -->

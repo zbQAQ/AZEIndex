@@ -2,7 +2,7 @@
   <div class="resolve">
     <div class="container">
 			<div class="topTit">
-				历史解决方案
+				解决方案
 			</div>
       <div class="row">
         <div class="item col-md-4" v-for="(item, index) of list" :key="index" @click="goResDetail(item.id)">
@@ -40,7 +40,7 @@ export default {
 				{
 					id: 3,
 					name: '无人船监测系统',
-					imgUrl: '/static/img/resolve/resolve3.jpg'
+					imgUrl: '/static/img/resolve/resolve6.jpg'
 				},
 				{
 					id: 4,
@@ -68,11 +68,6 @@ export default {
 					imgUrl: '/static/img/resolve/resolve17.jpg'
 				},
 				{
-					id: 9,
-					name: '蚀刻液综合处理监管系统',
-					imgUrl: '/static/img/resolve/resolve15.jpg'
-				},
-				{
 					id: 10,
 					name: '环保税智慧管理系统',
 					imgUrl: '/static/img/resolve/resolve10.jpg'
@@ -81,6 +76,11 @@ export default {
 					id: 11,
 					name: '医院环境综合管理系统',
 					imgUrl: '/static/img/resolve/resolve13.jpg'
+				},
+				{
+					id: 12,
+					name: '环保咨询',
+					imgUrl: '/static/img/resolve/resolve1.jpg'
 				},	
 			]
     };

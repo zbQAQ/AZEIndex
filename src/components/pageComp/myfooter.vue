@@ -21,11 +21,11 @@ export default {
 </script>
 <style scoped>
 .temp {
-	/* position: relative; */
-	position: fixed;
+	position: relative;
+	/* position: fixed; */
 	bottom: 0;
 	z-index: 99999;
-
+	margin-top: 50px;
 }
 .myfooter {
 	position: absolute;

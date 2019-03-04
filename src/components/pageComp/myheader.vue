@@ -50,11 +50,12 @@ export default {
     return {
       navlist: [
         { path: "home", name: "首页" },
-        { path: "aboutme", name: "关于我们" },
         { path: "news", name: "新闻中心" },
         { path: "resolve", name: "解决方案" },
-        { path: "cuscase", name: "客户案例" },
-        { path: "contact", name: "联系我们" }
+        // { path: "cuscase", name: "客户案例" },
+        // { path: "contact", name: "联系我们" }
+        { path: "products", name: "产品中心" },
+        { path: "aboutme", name: "关于我们" },
       ],
       curPage: "home"
     };

@@ -1,13 +1,13 @@
 <template>
-  <div class="container aboutMe">
+  <div class="container products">
     <div class="col-md-3 col-xs-12 leftNav">
-      <div class="leftItem topTit"><div class="aze">公司介绍</div></div>
+      <div class="leftItem topTit"><div class="aze">产品中心</div></div>
       <router-link v-for="(item, index) in navList" :key="index"
         class="leftItem"
         v-bind:class="{'leftActive':page === item.path}" 
         :to="item.path"
       >
-        <div class="box3-left" @click="abouteChange(item.path)">
+        <div class="box3-left" @click="productsChange(item.path)">
           <span class="fa fa-caret-right faHidden"></span>
           <span>{{item.name}}</span>
         </div>
@@ -23,23 +23,19 @@
 </template>
 <script>
 export default {
-  name: "AboutMe",
+  name: "Products",
   data() {
     return {
-      msg: "hello aboutMe",
-      page: 'introduce',
+      msg: "hello products",
+      page: 'proAir',
       navList: [
-        {path: 'introduce', name: '公司简介'},
-        {path: 'culture', name: '企业文化'},
-        // {path: 'devHistory', name: '发展历程'},
-        {path: 'honor', name: '荣誉资质'},
-        {path: 'contact', name: '联系我们'},
-        {path: 'cooperation', name: '合作伙伴'},
+        {path: 'proAir', name: ' 气 '},
+        {path: 'proWater', name: ' 水 '},
       ]
     };
   },
   methods: {
-    abouteChange(path) {
+    productsChange(path) {
       this.page = path
     }
   },
@@ -47,7 +43,7 @@ export default {
 </script>
 <style scoped>
 
-.aboutMe {
+.products {
   min-height: 93%;
 }
 .aze {
