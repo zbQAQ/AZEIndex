@@ -45,6 +45,7 @@ export default {
 
 .products {
   min-height: 93%;
+  padding-bottom: 80px;
 }
 .aze {
   background-color: #20ace6;

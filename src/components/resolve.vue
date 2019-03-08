@@ -5,10 +5,10 @@
 				解决方案
 			</div>
       <div class="row">
-        <div class="item col-md-4" v-for="(item, index) of list" :key="index" @click="goResDetail(item.id)">
+        <div class="item col-md-4" v-for="(item, index) of resolveList" :key="index" @click="goResDetail(item.id)">
 					<div class="itemBox">
 						<div class="thumb">
-							<img :src="item.imgUrl" alt>
+							<img :src="'https://alioss.app-link.org/alucard263096/blog/wangzhanid/' + item.thumb" alt>
 						</div>
 						<p>{{item.name}}</p>
 					</div>
@@ -21,74 +21,24 @@
 </template>
 <script>
 import actBox from "./pageComp/actbox";
+import posts from '@/tools/request'
 export default {
   name: "resolve",
   data() {
     return {
       msg: "hello resolve",
-      list: [
-				{
-					id: 1,
-					name: '水质监测网格化',
-					imgUrl: '/static/img/resolve/resolve12.jpg'
-				},
-				{
-					id: 2,
-					name: '城市地下管网水质在线监测系统',
-					imgUrl: '/static/img/resolve/resolve8.jpg'
-				},
-				{
-					id: 3,
-					name: '无人船监测系统',
-					imgUrl: '/static/img/resolve/resolve6.jpg'
-				},
-				{
-					id: 4,
-					name: '大气环境移动监测方案',
-					imgUrl: '/static/img/resolve/resolve14.jpg'
-				},
-				{
-					id: 5,
-					name: '高光谱监测系统',
-					imgUrl: '/static/img/resolve/resolve2.jpg'
-				},
-				{
-					id: 6,
-					name: '汽车尾气遥感监控系统',
-					imgUrl: '/static/img/resolve/resolve11.jpg'
-				},
-				{
-					id: 7,
-					name: '餐饮油烟监管系统',
-					imgUrl: '/static/img/resolve/resolve16.jpg'
-				},
-				{
-					id: 8,
-					name: '固废环境精细化管理系统',
-					imgUrl: '/static/img/resolve/resolve17.jpg'
-				},
-				{
-					id: 10,
-					name: '环保税智慧管理系统',
-					imgUrl: '/static/img/resolve/resolve10.jpg'
-				},
-				{
-					id: 11,
-					name: '医院环境综合管理系统',
-					imgUrl: '/static/img/resolve/resolve13.jpg'
-				},
-				{
-					id: 12,
-					name: '环保咨询',
-					imgUrl: '/static/img/resolve/resolve1.jpg'
-				},	
-			]
+			resolveList: []
     };
   },
   methods: {
 		goResDetail(id) {
 			this.$router.push({path: '/resoDetail', query: { resoId: id }})
 		}
+	},
+	async created() {
+		const data = await posts.getResolveList()
+		this.resolveList = data
+		// console.log(data)
 	},
   components: {
     actBox
@@ -97,7 +47,7 @@ export default {
 </script>
 <style scoped>
 .resolve {
-	margin-bottom: 50px;
+	padding-bottom: 50px;
 }
 .container {
   padding-top: 55px;

@@ -1,61 +1,56 @@
 <template>
 	<div class="temp">
-		
-		<carousel> </carousel>
-
-		<div class="content container">
-			<div class="row">	
-				<div class="col-md-6 contLeft" @click="toAboutme">
-					<img src="/static/img/proimg1.jpg" alt="">
-					<div class="imgTips">
-						<h3>智慧生态环保系统</h3>
-						<p class="tipsTxt">环保咨询、环境监测、环境治理、环保管家服务等</p>
-					</div>
-					<div class="bottom"></div>
-				</div>
-				<div class="col-md-6 contRight">
-
-					<div class="col-md-12 rightTop" @click="toAboutme">
-						<img src="/static/img/proimg2.jpg" alt="">
+		<div>
+			<carousel> </carousel>
+			<div class="content container">
+				<div class="row">	
+					<div class="col-md-6 contLeft" @click="toAboutme">
+						<img src="/static/img/proimg1.jpg" alt="">
 						<div class="imgTips">
-							<h3>设备智能制造</h3>
-							<p class="tipsTxt">生态环保监测、治理设备等</p>
+							<h3>智慧生态环保系统</h3>
+							<p class="tipsTxt">环保咨询、环境监测、环境治理、环保管家服务等</p>
 						</div>
+						<div class="bottom"></div>
 					</div>
+					<div class="col-md-6 contRight">
 
-					<div class="col-md-12 boxMargin">间隔区</div>
-
-					<div class="col-md-12 rightBottom" @click="toAboutme">
-						<img src="/static/img/proimg3.jpg" alt="">
-						<div class="imgTips">
-							<h3>创新服务</h3>
-							<p class="tipsTxt">环保税、绿色金融、绿色保险等</p>
+						<div class="col-md-12 rightTop" @click="toAboutme">
+							<img src="/static/img/proimg2.jpg" alt="">
+							<div class="imgTips">
+								<h3>设备智能制造</h3>
+								<p class="tipsTxt">生态环保监测、治理设备等</p>
+							</div>
 						</div>
-					</div>
 
+						<div class="col-md-12 boxMargin">间隔区</div>
+
+						<div class="col-md-12 rightBottom" @click="toAboutme">
+							<img src="/static/img/proimg3.jpg" alt="">
+							<div class="imgTips">
+								<h3>创新服务</h3>
+								<p class="tipsTxt">环保税、绿色金融、绿色保险等</p>
+							</div>
+						</div>
+
+					</div>
 				</div>
+				<div class="row"></div>
 			</div>
-			<div class="row"></div>
+			<!-- <div class="contVideo container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="videoBox">
+							<video controls="controls" autoplay="autoplay" height="450" width="100%" 
+								src="">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			<actBox />
 		</div>
-
-		<!-- <div class="contVideo container">
-			<div class="row">
-				<div class="col-md-12">
-
-					<div class="videoBox">
-
-						<video controls="controls" autoplay="autoplay" height="450" width="100%" 
-							src="">
-							Your browser does not support the video tag.
-						</video>
-
-					</div>
-
-				</div>
-			</div>
-		</div> -->
-
-		<actBox />
+		<!-- <loading /> -->
 			
 	</div>
 </template>
@@ -63,6 +58,9 @@
 <script>
 import carousel from './pageComp/carousel'
 import actBox from './pageComp/actbox'
+
+import posts from '@/tools/request'
+
 export default {
   name: 'Home',
   data () {
@@ -71,9 +69,9 @@ export default {
 		}
 	},
 	/*添加了一个钩子函数*/ 
-	mounted:function(){
-			// alert("欢迎来到安志生态环境有限公司");
+	mounted() {
 	},
+	created() {},
 	methods: {
 		toAboutme() {
 			this.$router.push({ path: '/aboutme' })
@@ -88,7 +86,7 @@ export default {
 <style scoped>
 .temp {
 	/* height: 3200px; */
-	margin-bottom: 50px;
+	padding-bottom: 50px;
 }
 .boxMargin {
 	font-size: 0;

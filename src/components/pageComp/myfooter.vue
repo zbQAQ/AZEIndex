@@ -1,7 +1,7 @@
 <template>
 	<div class="temp">
 		<div class="myfooter">
-			<strong>Copyright &copy; 2018-2019 <a href="#">安志环保监控</a>.</strong> 
+			<strong>Copyright&copy;2018-2019 <a href="#">安志环保监控</a>.</strong> 
 			粤ICP备19016648号
 			<!-- <div class="footerTxt">
 				<b>Version</b> 1.0
@@ -21,10 +21,11 @@ export default {
 </script>
 <style scoped>
 .temp {
-	position: relative;
+	/* position: relative; */
+	position: absolute;
 	/* position: fixed; */
 	bottom: 0;
-	z-index: 99999;
+	z-index: 99;
 	margin-top: 50px;
 }
 .myfooter {
@@ -38,10 +39,23 @@ export default {
 	/* background: #f5f5f5; */
 	background-color: #3a3a3a;
 	/*yinjianquan更改了footer样式*/
+	font-size: 12px
 }
 .footerTxt {
 	display: inline-block;
 }
+
+@media screen and (max-width: 400px){
+	.myfooter {
+		height: auto;
+		line-height: 28px;
+		padding: 5px 0;
+	}
+	.myfooter strong{
+		display: block;
+	}
+}
+
 </style>
 
 
