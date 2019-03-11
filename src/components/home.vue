@@ -1,6 +1,6 @@
 <template>
 	<div class="temp">
-		<div>
+		<div v-show="!loadingFlag">
 			<carousel> </carousel>
 			<div class="content container">
 				<div class="row">	
@@ -50,35 +50,46 @@
 			</div> -->
 			<actBox />
 		</div>
-		<!-- <loading /> -->
-			
+		<loading v-show="loadingFlag" />
 	</div>
 </template>
 
 <script>
 import carousel from './pageComp/carousel'
 import actBox from './pageComp/actbox'
-
+import loading from './pageComp/loading'
 import posts from '@/tools/request'
-
 export default {
   name: 'Home',
   data () {
     return {
-			msg: 'hellow myHome'
+			msg: 'hellow myHome',
+			loadingFlag: true
 		}
 	},
-	/*添加了一个钩子函数*/ 
-	mounted() {
+	mounted() {},
+	async created() {
+		const data = await posts.getWebConfig() 
+		let hasConfig = sessionStorage.getItem('webConfig')
+		if(hasConfig != JSON.stringify(data) || hasConfig == null) {
+			// console.log('本地存储为空或者有变， 我修改了config')
+			if(data != null) {
+				sessionStorage.setItem('webConfig', JSON.stringify(data));
+				this.loadingFlag = false
+			}
+		}else {
+			// console.log('没变我就没改了')
+			this.loadingFlag = false
+		}
+
 	},
-	created() {},
 	methods: {
 		toAboutme() {
 			this.$router.push({ path: '/aboutme' })
 		}
 	},
 	components: {
-		carousel, actBox
+		carousel, actBox, loading
 	}
 }
 </script>

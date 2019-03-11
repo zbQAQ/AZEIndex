@@ -19,8 +19,10 @@
       </div>
       <div class="box5-p3">
         <p>
-         公司电话：0755-22672445 <br /> 传真：0755-22672445 <br />
-         地址：深圳市南山区粤海街道粤海四道北航大厦1号楼8006
+         公司电话：{{webConfig.mobile}}<br />
+         传真：{{webConfig.fax}}<br />
+         地址：{{webConfig.addr}}<br />
+         邮箱：{{webConfig.email}}<br />
 
         </p>
       </div>
@@ -36,10 +38,14 @@ export default {
   name: 'introduce',
   data () {
     return {
-			msg: 'hello introduce!'
+      msg: 'hello introduce!',
+      webConfig: {}
 		}
   },
-	methods: {}
+  methods: {},
+  created() {
+    this.webConfig = JSON.parse(sessionStorage.getItem('webConfig'));
+  }
 }
 </script>
 <style scoped>

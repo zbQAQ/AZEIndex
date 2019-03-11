@@ -1,38 +1,41 @@
 <template>
   <div class="temp resoDetail">
-    <div class="container">
-      <div class="row detail">
-        <div class="title">{{resolve.name}}</div>
+    <div v-show="!loadingFlag">
+      <div class="container">
+        <div class="row detail">
+          <div class="title">{{resolve.name}}</div>
 
-        <div class="cont" v-if="resolve.desc">
-          <div class="contTit">系统概述</div>
-          <div class="content" v-html="resolve.desc"></div>
+          <div class="cont" v-if="resolve.desc">
+            <div class="contTit">系统概述</div>
+            <div class="content" v-html="resolve.desc"></div>
+          </div>
+          <div class="cont" v-if="resolve.trait">
+            <div class="contTit">系统特点</div>
+            <div class="content" v-html="resolve.trait"></div>
+          </div>
+          <div class="cont" v-if="resolve.func">
+            <div class="contTit">系统功能</div>
+            <div class="content" v-html="resolve.func"></div>
+          </div>
         </div>
-        <div class="cont" v-if="resolve.trait">
-          <div class="contTit">系统特点</div>
-          <div class="content" v-html="resolve.trait"></div>
-        </div>
-        <div class="cont" v-if="resolve.func">
-          <div class="contTit">系统功能</div>
-          <div class="content" v-html="resolve.func"></div>
-        </div>
+
       </div>
-
+      <goBack />
     </div>
-
-		<goBack />
-
+    <loading v-show="loadingFlag"/>
   </div>
 </template>
 <script>
 import goBack from './pageComp/goBack'
 import posts from '@/tools/request'
+import loading from './pageComp/loading'
 export default {
   name: "resolveDetail",
   data() {
     return {
       msg: "hello resolve detail!",
-      resolve: {}
+      resolve: {},
+      loadingFlag: true
     };
   },
 	methods: {
@@ -49,13 +52,17 @@ export default {
   async created() {
     let detailId = this.$route.query.resoId
     const data = await posts.getResolveDetail(detailId)
-    data.desc = this.unescape(data.desc)
-    data.trait = this.unescape(data.trait)
-    data.func = this.unescape(data.func)
-    this.resolve = data
+    if(data != null) {
+      data.desc = this.unescape(data.desc)
+      data.trait = this.unescape(data.trait)
+      data.func = this.unescape(data.func)
+      this.resolve = data
+      this.loadingFlag = false
+    }
+    
 	},
 	components: {
-		goBack
+		goBack, loading
 	}
 };
 </script>

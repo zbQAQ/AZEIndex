@@ -1,33 +1,37 @@
 <template>
   <div class="resolve">
-    <div class="container">
-			<div class="topTit">
-				解决方案
-			</div>
-      <div class="row">
-        <div class="item col-md-4" v-for="(item, index) of resolveList" :key="index" @click="goResDetail(item.id)">
-					<div class="itemBox">
-						<div class="thumb">
-							<img :src="'https://alioss.app-link.org/alucard263096/blog/wangzhanid/' + item.thumb" alt>
+		<div v-show="!loadingFlag">
+			<div class="container" >
+				<div class="topTit">
+					解决方案
+				</div>
+				<div class="row">
+					<div class="item col-md-4" v-for="(item, index) of resolveList" :key="index" @click="goResDetail(item.id)">
+						<div class="itemBox">
+							<div class="thumb">
+								<img :src="'https://alioss.app-link.org/alucard263096/blog/wangzhanid/' + item.thumb" alt>
+							</div>
+							<p>{{item.name}}</p>
 						</div>
-						<p>{{item.name}}</p>
 					</div>
-        </div>
-      </div>
-    </div>
-
-    <actBox/>
+				</div>
+			</div>
+			<actBox/>
+		</div>
+		<loading v-show="loadingFlag"/>
   </div>
 </template>
 <script>
 import actBox from "./pageComp/actbox";
 import posts from '@/tools/request'
+import loading from './pageComp/loading'
 export default {
   name: "resolve",
   data() {
     return {
       msg: "hello resolve",
-			resolveList: []
+			resolveList: [],
+			loadingFlag: true
     };
   },
   methods: {
@@ -37,11 +41,16 @@ export default {
 	},
 	async created() {
 		const data = await posts.getResolveList()
-		this.resolveList = data
+		if(data != null) {
+			setTimeout(() => {
+				this.resolveList = data
+				this.loadingFlag = false
+			}, 200) 
+		}
 		// console.log(data)
 	},
   components: {
-    actBox
+    actBox, loading
   }
 };
 </script>

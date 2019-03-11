@@ -38,8 +38,10 @@ export default {
 		const data = await posts.getNewsList()
 		// console.log('data', data)
 		setTimeout(() => {
-			this.newsList = data
-			this.loadingFlag = false
+			if(data != null) {
+				this.newsList = data
+				this.loadingFlag = false
+			}
 		}, 200)
 		// this.newsList = data
 		// this.loadingFlag = false
