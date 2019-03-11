@@ -69,7 +69,19 @@ export default class request {
     try {
       const res = await axios.get(url + '/web/webconfig')
       if(res.status === 200 && res.statusText === "OK") {
-        console.log('我请求了一次getWebConfig', res)
+        // console.log('我请求了一次getWebConfig', res.data)
+        return res.data
+      }
+      return null
+    }catch(e) {
+      return null
+    }
+  }
+  static async getBanner() { //获取bannerList
+    try {
+      const res = await axios.get(url + '/banner/banner')
+      if(res.status === 200 && res.statusText === "OK") {
+        // console.log('getBanner', res.data)
         return res.data
       }
       return null

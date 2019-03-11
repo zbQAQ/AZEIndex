@@ -81,7 +81,6 @@ export default {
 			// console.log('没变我就没改了')
 			this.loadingFlag = false
 		}
-
 	},
 	methods: {
 		toAboutme() {

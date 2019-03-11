@@ -34,6 +34,7 @@
 	</div>
 </template>
 <script>
+import posts from '@/tools/request'
 export default {
   name: 'introduce',
   data () {
@@ -42,9 +43,22 @@ export default {
       webConfig: {}
 		}
   },
-  methods: {},
+  methods: {
+    async getConfig() {
+      const data = await posts.getWebConfig()
+      if(data != null) {
+        this.webConfig = data
+        sessionStorage.setItem('webConfig', JSON.stringify(data));
+      }
+    }
+  },
   created() {
-    this.webConfig = JSON.parse(sessionStorage.getItem('webConfig'));
+    let hasConfig = sessionStorage.getItem('webConfig')
+    if(hasConfig == null) {
+      this.getConfig()
+    }else {
+      this.webConfig = JSON.parse(sessionStorage.getItem('webConfig'));
+    }
   }
 }
 </script>

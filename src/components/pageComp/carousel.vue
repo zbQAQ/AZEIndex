@@ -11,22 +11,10 @@
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner myInner" role="listbox">
-        <div class="item active">
-          <img src="/static/img/carousel4.png" alt="carousel">
+        <div class="item" v-for="(item, index) of banner" :class="{'active': index == 0}" :key="index">
+          <img :src="model + item.upload" alt="carousel">
           <div class="carousel-caption"></div>
         </div>
-        <div class="item ">
-          <img src="/static/img/carousel2.jpg" alt="carousel">
-          <div class="carousel-caption"></div>
-        </div>
-        <div class="item">
-          <img src="/static/img/carousel3.jpg" alt="carousel">
-          <div class="carousel-caption"></div>
-        </div>
-        <!-- <div class="item ">
-          <img src="/static/img/carousel1.jpg" alt="carousel">
-          <div class="carousel-caption"></div>
-        </div> -->
       </div>
 
       <!-- Controls -->
@@ -43,15 +31,24 @@
 </template>
 
 <script>
+import posts from '@/tools/request'
 export default {
   name: 'mycarousel',
 	props: [],
   data () {
     return {
-			msg: 'hello mycarousel!'
+      msg: 'hello mycarousel!',
+      banner: [],
+      model: 'http://applinkupload.oss-cn-shenzhen.aliyuncs.com/alucard263096/blog/img/'
 		}
   },
-	methods: {}
+  methods: {},
+  async created() {
+    const data = await posts.getBanner()
+    if(data != null) {
+      this.banner = data
+    }
+  }
 }
 </script>
 <style scoped>

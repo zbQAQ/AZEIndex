@@ -107,7 +107,7 @@ export default {
 
 .actItem .newsItem .nLink {
 	display: block;
-  width: 60%;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -136,6 +136,9 @@ export default {
   .contact .actItem .newsItem {
 		text-align: left;
 	}
+  .actItem .newsItem .nLink {
+    width: 75%;
+  }
 }
 @media (min-width: 1200px) {
 

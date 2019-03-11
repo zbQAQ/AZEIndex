@@ -29,10 +29,10 @@ export default {
     let newsId = this.$route.query.newsId
     const data = await posts.getNewsDetail(newsId)
     data.content = this.unescape(data.content)
-    setTimeout(() => {
+    // setTimeout(() => {
 			this.newsDetail = data
 			this.loadingFlag = false
-		}, 300)
+		// }, 300)
 	},
   components: {
     goBack, loading

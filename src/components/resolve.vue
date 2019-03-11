@@ -42,10 +42,10 @@ export default {
 	async created() {
 		const data = await posts.getResolveList()
 		if(data != null) {
-			setTimeout(() => {
+			// setTimeout(() => {
 				this.resolveList = data
 				this.loadingFlag = false
-			}, 200) 
+			// }, 200) 
 		}
 		// console.log(data)
 	},
