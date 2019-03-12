@@ -60,7 +60,7 @@ export default {
 		}
   },
 	methods: {},
-	async created() {
+	async mounted() {
 		const newsData = await posts.getThreeNews()
 		// console.log(data, 'actbox created')
 		this.webConfig = JSON.parse(sessionStorage.getItem('webConfig'));
