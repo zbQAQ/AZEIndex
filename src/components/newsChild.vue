@@ -13,8 +13,8 @@
 </template>
 <script>
 import goBack from "./pageComp/goBack";
-import posts from '@/tools/request'
-import loading from './pageComp/loading'
+import posts from "@/tools/request";
+import loading from "./pageComp/loading";
 export default {
   name: "newsChild",
   data() {
@@ -26,28 +26,36 @@ export default {
     };
   },
   async created() {
-    let newsId = this.$route.query.newsId
-    const data = await posts.getNewsDetail(newsId)
-    data.content = this.unescape(data.content)
+    let newsId = this.$route.query.newsId;
+    const data = await posts.getNewsDetail(newsId);
+    data.content = this.unescape(data.content);
     // setTimeout(() => {
-			this.newsDetail = data
-			this.loadingFlag = false
-		// }, 300)
-	},
+    this.newsDetail = data;
+    this.loadingFlag = false;
+    // }, 300)
+  },
   components: {
-    goBack, loading
+    goBack,
+    loading
   },
   methods: {
     unescape(html) {
-      return html
-        .replace(html ? /&(?!#?\w+;)/g : /&/g, "&amp;")
-        .replace(/&lt;/g, "<")
-        .replace(/&gt;/g, ">")
-        .replace(/&quot;/g, ' " ')
-        .replace(/&#39;/g, "'")
-        .replace(/&nbsp;/g, "123");
+      var s = "";
+      if (html.length == 0) return "";
+      s = html.replace(/&amp;/g, "&");
+      s = s.replace(/&lt;/g, "<");
+      s = s.replace(/&gt;/g, ">");
+      s = s.replace(/&nbsp;/g, " ");
+      s = s.replace(/&#39;/g, "'");
+      s = s.replace(/&quot;/g, '"');
+      s = s.replace(new RegExp("</p >", "gm"), "</p ><br />");
+      s = s.replace(
+        new RegExp('"/alucard263096/ariesmall/upload/', "gm"),
+        '"' + "https://cmsdev.app-link.org/alucard263096/ariesmall/upload/"
+      );
+      return s;
     }
-  },
+  }
 };
 </script>
 <style>
@@ -101,15 +109,15 @@ export default {
   font-size: 20px;
 }
 .newsChildCnt .content .ind3 {
-  text-indent: 3em
+  text-indent: 3em;
 }
 .newsChildCnt .content .ind4 {
-  text-indent: 4em
+  text-indent: 4em;
 }
 .newsChildCnt .content .ind5 {
-  text-indent: 5em
+  text-indent: 5em;
 }
 .newsChildCnt .content .ind6 {
-  text-indent: 6em
+  text-indent: 6em;
 }
 </style>
